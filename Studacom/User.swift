@@ -20,7 +20,6 @@ class User {
         
         user_name = json["username"].stringValue
         phone = json["phone"].stringValue
-        
     }
     
     
