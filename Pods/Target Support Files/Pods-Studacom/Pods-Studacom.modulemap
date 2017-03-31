@@ -1,0 +1,6 @@
+framework module Pods_Studacom {
+  umbrella header "Pods-Studacom-umbrella.h"
+
+  export *
+  module * { export * }
+}
