@@ -8,12 +8,17 @@
 
 import Foundation
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class SearchResultsViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Results"
-        
     }
 }
+
+
+
+
+

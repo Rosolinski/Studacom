@@ -18,7 +18,7 @@ class PropertyInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "\(accommodation.price)"
+        self.title = "\(accommodation.id)"
         
         print(accommodation.description)
         print(accommodation.coordinate)
@@ -30,6 +30,8 @@ class PropertyInfoViewController: UIViewController {
     }
 
 }
-    
+
+
+
 
 

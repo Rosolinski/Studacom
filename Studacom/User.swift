@@ -16,12 +16,14 @@ class User {
     var user_name: String!
     var phone: String!
     var password: String!
+    var email: String!
     
     init(json: JSON) {
         
         user_name = json["username"].stringValue
         phone = json["phone"].stringValue
-        password = json["password"].stringValue
+        password = json["*******"].stringValue
+        email = json["email"].stringValue
     }
     
     

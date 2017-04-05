@@ -16,12 +16,14 @@ class Accommodation {
     var description: String!
     var price: Double!
     var coordinate: CLLocationCoordinate2D!
+    var id: String!
     
     init(json: JSON) {
         
         description = json["description"].stringValue
         price = json["price"].doubleValue
         coordinate = CLLocationCoordinate2D(latitude: json["lat"].doubleValue, longitude: json["lng"].doubleValue)
+        id = json["id"].stringValue
         
     }
     
