@@ -187,6 +187,7 @@
 				TargetAttributes = {
 					A93ECCB11E82F67B00DE6413 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = PB5S47GH58;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -418,8 +419,9 @@
 			baseConfigurationReference = 67CAD2F4F3452BB9E142EF4C /* Pods-Studacom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PB5S47GH58;
 				INFOPLIST_FILE = Studacom/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RobinOsolinski.Studacom;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,8 +434,9 @@
 			baseConfigurationReference = A2B17CD6C3F50DD876F199CC /* Pods-Studacom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = PB5S47GH58;
 				INFOPLIST_FILE = Studacom/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RobinOsolinski.Studacom;
 				PRODUCT_NAME = "$(TARGET_NAME)";

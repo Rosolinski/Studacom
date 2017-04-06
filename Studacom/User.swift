@@ -22,7 +22,7 @@ class User {
         
         user_name = json["username"].stringValue
         phone = json["phone"].stringValue
-        password = json["*******"].stringValue
+        password = json["password"].stringValue
         email = json["email"].stringValue
     }
     

@@ -14,15 +14,20 @@ import SwiftyJSON
 
 class PropertyInfoSecondViewController: UIViewController {
     
+    @IBOutlet var descLabel: UILabel!
+
+    var accommodation: Accommodation!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Schedule a Meeting"
-    }
-    
-    @IBAction func goToThirdVCBtnTapped(_ sender: Any) {
-        performSegue(withIdentifier: "segueToThirdVC", sender: self)
+        descLabel.text = "\(accommodation.description!)"
         
     }
-    
-    
-}
+
+    @IBAction func goToThirdVCBtnTapped(_ sender: Any) {
+        performSegue(withIdentifier: "segueToThirdVC", sender: self)
+    }
+
+ }
+
