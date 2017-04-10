@@ -23,5 +23,4 @@ class PropertyInfoThirdViewController: UIViewController {
          dismiss(animated: true, completion: nil)
     }
     
-    
 }

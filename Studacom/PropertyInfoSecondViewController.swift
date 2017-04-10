@@ -14,14 +14,14 @@ import SwiftyJSON
 
 class PropertyInfoSecondViewController: UIViewController {
     
-    @IBOutlet var descLabel: UILabel!
+    @IBOutlet var descText: UITextView!
 
     var accommodation: Accommodation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Schedule a Meeting"
-        descLabel.text = "\(accommodation.description!)"
+        descText.text = "\(accommodation.description!)"
         
     }
 

@@ -11,6 +11,8 @@ import UIKit
 
 class UserViewController: UIViewController {
     
+    var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "My Account"
