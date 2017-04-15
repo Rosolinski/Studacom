@@ -15,4 +15,17 @@ class PostViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Post an Offer"
     }
+    
+    @IBAction func goToFirstPropertyVCBtnTapped(_ sender: Any) {
+    performSegue(withIdentifier: "goToFirstPropertySegue", sender: self)
+    }
+    
+    @IBAction func goToSecondPropertyVCBtnTapped(_ sender: Any) {
+    performSegue(withIdentifier: "goToSecondPropertySegue", sender: self)
+    }
+    
+    @IBAction func goToThirdPropertyVCBtnTapped(_ sender: Any) {
+    performSegue(withIdentifier: "goToThirdPropertySegue", sender: self)
+    }
+    
 }
