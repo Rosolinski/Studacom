@@ -24,7 +24,7 @@ class MenuViewController: UIViewController {
         
         mainScrollView.frame = view.frame
         
-        imageArray = [#imageLiteral(resourceName: "StudacomMenu1-1"), #imageLiteral(resourceName: "StudacomMenu2Test"), #imageLiteral(resourceName: "StudacomMenu3Test"),#imageLiteral(resourceName: "StudacomMenu4Test")]
+        imageArray = [#imageLiteral(resourceName: "StudacomMenu1"), #imageLiteral(resourceName: "StudacomMenu2"), #imageLiteral(resourceName: "StudacomMenu3"),#imageLiteral(resourceName: "StudacomMenu4"), #imageLiteral(resourceName: "StudacomMenu1b"), #imageLiteral(resourceName: "StudacomMenu2"), #imageLiteral(resourceName: "StudacomMenu3"), #imageLiteral(resourceName: "StudacomMenu4"), #imageLiteral(resourceName: "StudacomMenu1b"), #imageLiteral(resourceName: "StudacomMenu2"), #imageLiteral(resourceName: "StudacomMenu3"), #imageLiteral(resourceName: "StudacomMenu4"), #imageLiteral(resourceName: "StudacomMenu1b"), #imageLiteral(resourceName: "StudacomMenu2"), #imageLiteral(resourceName: "StudacomMenu3"), #imageLiteral(resourceName: "StudacomMenu4b")]
         
         for i in 0..<imageArray.count{
         

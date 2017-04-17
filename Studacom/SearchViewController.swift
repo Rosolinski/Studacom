@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Search"
+        self.hideKeyboardWhenTappedAround() 
     
     }
     @IBAction func goToResultsVCBtnTapped(_ sender: Any) {
