@@ -39,6 +39,11 @@ class PropertyInfoViewController: UIViewController {
     @IBAction func goToSecondVCBtnTapped(_ sender: Any) {
         performSegue(withIdentifier: "segueToSecondVC", sender: self)
     }
+    
+    @IBAction func goToCommentsVCBtnTapped(_ sender: Any) {
+        performSegue(withIdentifier: "CommentsSegue", sender: self)
+        
+    }
 
 }
 
