@@ -35,6 +35,20 @@ class PropertyInfoViewController: UIViewController {
             vc.accommodation = accommodation
         }
     }
+    
+    @IBAction func showBtn(_ sender: Any) {
+        
+        let alertController = UIAlertController (title: "Add successful", message: "Property \(accommodation.id!) added to favourites", preferredStyle: .alert)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+            print("Added \(self.accommodation.id!) to favourites!");
+        }
+        
+        alertController.addAction(OKAction)
+        
+    }
 
     @IBAction func goToSecondVCBtnTapped(_ sender: Any) {
         performSegue(withIdentifier: "segueToSecondVC", sender: self)
