@@ -17,6 +17,7 @@ class User {
     var phone: String!
     var password: String!
     var email: String!
+    var id: String!
     
     init(json: JSON) {
         
@@ -24,6 +25,7 @@ class User {
         phone = json["phone"].stringValue
         password = json["password"].stringValue
         email = json["email"].stringValue
+        id = json["id"].stringValue
     }
     
     

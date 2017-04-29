@@ -38,7 +38,7 @@ class PropertyInfoViewController: UIViewController {
     
     @IBAction func showBtn(_ sender: Any) {
         
-        let alertController = UIAlertController (title: "Add successful", message: "Property \(accommodation.id!) added to favourites", preferredStyle: .alert)
+        let alertController = UIAlertController (title: "Add successful", message: "\(accommodation.accommodation_type!) added to favourites", preferredStyle: .alert)
         
         self.present(alertController, animated: true, completion: nil)
         

@@ -12,7 +12,7 @@ import UIKit
 class CustomCell: UITableViewCell {
     
     @IBOutlet var titleLabel: UILabel!
-    
     var accommodation: Accommodation!
+    var user: User!
     
 }

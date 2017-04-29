@@ -9,15 +9,44 @@
 import Foundation
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Search"
-        self.hideKeyboardWhenTappedAround() 
+        self.hideKeyboardWhenTappedAround()
     
     }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        
+        //textField code
+        
+        textField.resignFirstResponder()  //if desired
+        performAction()
+        return true
+    }
+    
+    func performAction() {
+        
+        //action events
+    }
+    
     @IBAction func goToResultsVCBtnTapped(_ sender: Any) {
-    performSegue(withIdentifier: "goToResultsSegue", sender: self)
+    performSegue(withIdentifier: "goToAccomResultsSegue", sender: self)
+    }
+    
+    @IBAction func goToSecondResultsVCBtnTapped(_ sender: Any) {
+    performSegue(withIdentifier: "goToUserResultsSegue", sender: self)
+    }
+    
+    @IBAction func TextFieldPrimaryActionTriggered(_ sender: Any) {
+        print("Search Pressed")
+        performSegue(withIdentifier: "goToResultsSegue", sender: self)
+    }
+    
+    @IBAction func goToSearchResultsVCBtnTapped(_ sender: Any) {
+        print("Search Pressed")
+        performSegue(withIdentifier: "goToResultsSegue", sender: self)
     }
 }

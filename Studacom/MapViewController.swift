@@ -35,8 +35,7 @@ class MapViewController: UIViewController {
         self.locationManager.startUpdatingLocation()
         
         self.PropertyMap.showsUserLocation = true
-        
-    
+            
         self.PropertyMap.mapType = MKMapType.hybrid
         self.PropertyMap.showsUserLocation = true
         PropertyMap.setUserTrackingMode(.follow, animated: true)

@@ -29,13 +29,13 @@
 		A977FD301E85867200E61D7A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A977FD2F1E85867200E61D7A /* User.swift */; };
 		A9885E111E99139100BF696F /* OtherUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9885E101E99139100BF696F /* OtherUserViewController.swift */; };
 		A99332811E893EB800ECF659 /* PropertyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99332801E893EB800ECF659 /* PropertyInfoViewController.swift */; };
-		A99C24F41E9C3766007FF517 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99C24F31E9C3766007FF517 /* LoginViewController.swift */; };
 		A9CEB7991E8AB531002CE794 /* PropertyInfoSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CEB7981E8AB531002CE794 /* PropertyInfoSecondViewController.swift */; };
 		A9CEB79B1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CEB79A1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift */; };
-		A9D2BDAA1EA4F9BE00B16F76 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D2BDA91EA4F9BE00B16F76 /* SignInViewController.swift */; };
 		A9D2FC481EA7DD1D0014729B /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D2FC471EA7DD1D0014729B /* BrowseViewController.swift */; };
 		A9D6F3D91E8E793900EDBEA1 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D6F3D81E8E793900EDBEA1 /* SearchResultsViewController.swift */; };
 		A9D6F3DB1E8E7DA600EDBEA1 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D6F3DA1E8E7DA600EDBEA1 /* CustomAnnotation.swift */; };
+		A9EF211B1EACF742005AA268 /* SearchAccommodationResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF211A1EACF742005AA268 /* SearchAccommodationResultsViewController.swift */; };
+		A9EF211D1EACF757005AA268 /* SearchUserResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF211C1EACF757005AA268 /* SearchUserResultsViewController.swift */; };
 		A9F788571EA6603800B77B8C /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F788561EA6603800B77B8C /* CommentsViewController.swift */; };
 		A9F788591EA67EF900B77B8C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F788581EA67EF900B77B8C /* Comment.swift */; };
 /* End PBXBuildFile section */
@@ -69,13 +69,13 @@
 		A977FD2F1E85867200E61D7A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A9885E101E99139100BF696F /* OtherUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherUserViewController.swift; sourceTree = "<group>"; };
 		A99332801E893EB800ECF659 /* PropertyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyInfoViewController.swift; sourceTree = "<group>"; };
-		A99C24F31E9C3766007FF517 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A9CEB7981E8AB531002CE794 /* PropertyInfoSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyInfoSecondViewController.swift; sourceTree = "<group>"; };
 		A9CEB79A1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyInfoThirdViewController.swift; sourceTree = "<group>"; };
-		A9D2BDA91EA4F9BE00B16F76 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A9D2FC471EA7DD1D0014729B /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		A9D6F3D81E8E793900EDBEA1 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		A9D6F3DA1E8E7DA600EDBEA1 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		A9EF211A1EACF742005AA268 /* SearchAccommodationResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAccommodationResultsViewController.swift; sourceTree = "<group>"; };
+		A9EF211C1EACF757005AA268 /* SearchUserResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserResultsViewController.swift; sourceTree = "<group>"; };
 		A9F788561EA6603800B77B8C /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		A9F788581EA67EF900B77B8C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,18 +135,18 @@
 				A93ECCB51E82F67B00DE6413 /* AppDelegate.swift */,
 				A93ECCB71E82F67B00DE6413 /* MenuViewController.swift */,
 				A96A29F21E842A2600FDEBD9 /* FavouritesViewController.swift */,
-				A96A29EB1E8424B700FDEBD9 /* PostViewController.swift */,
-				A99C24F31E9C3766007FF517 /* LoginViewController.swift */,
-				A9D2BDA91EA4F9BE00B16F76 /* SignInViewController.swift */,
 				A9577AA51E8D37A5001399B8 /* UserViewController.swift */,
+				A96A29EB1E8424B700FDEBD9 /* PostViewController.swift */,
 				A96A29ED1E8424F900FDEBD9 /* HelpViewController.swift */,
 				A9577AA71E8D4DD8001399B8 /* HelpSecondViewController.swift */,
 				A9577AA91E8D5214001399B8 /* HelpThirdViewController.swift */,
 				A9577AAB1E8D5566001399B8 /* HelpFourthViewController.swift */,
 				A9577AAD1E8D557A001399B8 /* HelpFifthViewController.swift */,
 				A96A29F41E845E7E00FDEBD9 /* MapViewController.swift */,
-				A9D6F3D81E8E793900EDBEA1 /* SearchResultsViewController.swift */,
 				A96A29F81E84823000FDEBD9 /* SearchViewController.swift */,
+				A9D6F3D81E8E793900EDBEA1 /* SearchResultsViewController.swift */,
+				A9EF211C1EACF757005AA268 /* SearchUserResultsViewController.swift */,
+				A9EF211A1EACF742005AA268 /* SearchAccommodationResultsViewController.swift */,
 				A9D2FC471EA7DD1D0014729B /* BrowseViewController.swift */,
 				A99332801E893EB800ECF659 /* PropertyInfoViewController.swift */,
 				A9CEB7981E8AB531002CE794 /* PropertyInfoSecondViewController.swift */,
@@ -297,12 +297,12 @@
 				A96A29EC1E8424B700FDEBD9 /* PostViewController.swift in Sources */,
 				A9577AAE1E8D557A001399B8 /* HelpFifthViewController.swift in Sources */,
 				A9577AAA1E8D5214001399B8 /* HelpThirdViewController.swift in Sources */,
+				A9EF211B1EACF742005AA268 /* SearchAccommodationResultsViewController.swift in Sources */,
 				A96A29F91E84823000FDEBD9 /* SearchViewController.swift in Sources */,
 				A93ECCB81E82F67B00DE6413 /* MenuViewController.swift in Sources */,
 				A9577AAC1E8D5566001399B8 /* HelpFourthViewController.swift in Sources */,
 				A9D6F3D91E8E793900EDBEA1 /* SearchResultsViewController.swift in Sources */,
 				A9CEB79B1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift in Sources */,
-				A99C24F41E9C3766007FF517 /* LoginViewController.swift in Sources */,
 				A93ECCB61E82F67B00DE6413 /* AppDelegate.swift in Sources */,
 				A99332811E893EB800ECF659 /* PropertyInfoViewController.swift in Sources */,
 				A96A29F31E842A2600FDEBD9 /* FavouritesViewController.swift in Sources */,
@@ -312,10 +312,10 @@
 				A9885E111E99139100BF696F /* OtherUserViewController.swift in Sources */,
 				A9CEB7991E8AB531002CE794 /* PropertyInfoSecondViewController.swift in Sources */,
 				A9577AA81E8D4DD8001399B8 /* HelpSecondViewController.swift in Sources */,
-				A9D2BDAA1EA4F9BE00B16F76 /* SignInViewController.swift in Sources */,
 				A9F788591EA67EF900B77B8C /* Comment.swift in Sources */,
 				A96A29F51E845E7E00FDEBD9 /* MapViewController.swift in Sources */,
 				A977FD301E85867200E61D7A /* User.swift in Sources */,
+				A9EF211D1EACF757005AA268 /* SearchUserResultsViewController.swift in Sources */,
 				A9F788571EA6603800B77B8C /* CommentsViewController.swift in Sources */,
 				A9D6F3DB1E8E7DA600EDBEA1 /* CustomAnnotation.swift in Sources */,
 			);

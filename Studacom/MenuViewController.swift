@@ -41,5 +41,33 @@ class MenuViewController: UIViewController {
         let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: navigationController, action: nil)
         navigationItem.leftBarButtonItem = backButton
     }
+    
+    @IBAction func goToFavouritesVCBtnTapped(_ sender: Any) {
+    performSegue(withIdentifier: "goToFavouritesSegue", sender: self)
+    }
+    
+    @IBAction func goToAccountVCBtnTapped(_ sender: Any) {
+    performSegue(withIdentifier: "goToAccountSegue", sender: self)
+    }
+    
+    @IBAction func goToPostVCBtnTapped(_ sender: Any) {
+    performSegue(withIdentifier: "goToPostSegue", sender: self)
+    }
+    
+    @IBAction func goToHelpSegue(_ sender: Any) {
+    performSegue(withIdentifier: "goToHelpSegue", sender: self)
+    }
 
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

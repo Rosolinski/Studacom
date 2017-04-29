@@ -33,4 +33,5 @@ class BrowseViewController: UIViewController {
     
     @IBOutlet var AccommodationTableView: UITableView!
     
+    @IBOutlet var UserTableView: UITableView!
 }

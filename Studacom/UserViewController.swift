@@ -16,12 +16,12 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "My Account"
+        self.hideKeyboardWhenTappedAround()
         
     }
     
     @IBAction func goToFavouritesVCBtnTapped(_ sender: Any) {
             performSegue(withIdentifier: "favouriteSegue", sender: self)
     }
-    
     
 }
