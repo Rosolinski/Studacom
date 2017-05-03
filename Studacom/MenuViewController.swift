@@ -57,7 +57,14 @@ class MenuViewController: UIViewController {
     @IBAction func goToHelpSegue(_ sender: Any) {
     performSegue(withIdentifier: "goToHelpSegue", sender: self)
     }
+    
+    @IBAction func goToMapSegue(_ sender: Any) {
+    performSegue(withIdentifier: "goToMapSegue", sender: self)
+    }
 
+    @IBAction func goToSearchSegue(_ sender: Any) {
+    performSegue(withIdentifier: "goToSearchSegue", sender: self)
+    }
 }
 
 extension UIViewController {

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7CFAC9A97B57443FC1ABDAB4 /* Pods_Studacom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBE23C76A9775D4FDBA6C93 /* Pods_Studacom.framework */; };
+		A932D6531EB9E1F400DE856F /* PostFillUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932D6521EB9E1F400DE856F /* PostFillUserViewController.swift */; };
+		A932D6551EBA285F00DE856F /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932D6541EBA285F00DE856F /* CategoryViewController.swift */; };
 		A93DEABE1E9294B800796D16 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DEABD1E9294B800796D16 /* CustomCell.swift */; };
 		A93ECCB61E82F67B00DE6413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ECCB51E82F67B00DE6413 /* AppDelegate.swift */; };
 		A93ECCB81E82F67B00DE6413 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ECCB71E82F67B00DE6413 /* MenuViewController.swift */; };
@@ -16,9 +18,6 @@
 		A93ECCC31E82F67B00DE6413 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93ECCC11E82F67B00DE6413 /* LaunchScreen.storyboard */; };
 		A9577AA61E8D37A5001399B8 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9577AA51E8D37A5001399B8 /* UserViewController.swift */; };
 		A9577AA81E8D4DD8001399B8 /* HelpSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9577AA71E8D4DD8001399B8 /* HelpSecondViewController.swift */; };
-		A9577AAA1E8D5214001399B8 /* HelpThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9577AA91E8D5214001399B8 /* HelpThirdViewController.swift */; };
-		A9577AAC1E8D5566001399B8 /* HelpFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9577AAB1E8D5566001399B8 /* HelpFourthViewController.swift */; };
-		A9577AAE1E8D557A001399B8 /* HelpFifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9577AAD1E8D557A001399B8 /* HelpFifthViewController.swift */; };
 		A96A29EC1E8424B700FDEBD9 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A29EB1E8424B700FDEBD9 /* PostViewController.swift */; };
 		A96A29EE1E8424F900FDEBD9 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96A29ED1E8424F900FDEBD9 /* HelpViewController.swift */; };
 		A96A29F11E842A0100FDEBD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A96A29EF1E842A0100FDEBD9 /* Main.storyboard */; };
@@ -38,12 +37,17 @@
 		A9EF211D1EACF757005AA268 /* SearchUserResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF211C1EACF757005AA268 /* SearchUserResultsViewController.swift */; };
 		A9F788571EA6603800B77B8C /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F788561EA6603800B77B8C /* CommentsViewController.swift */; };
 		A9F788591EA67EF900B77B8C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F788581EA67EF900B77B8C /* Comment.swift */; };
+		A9FC59CD1EB7E1290007F21D /* PostFillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC59CC1EB7E1290007F21D /* PostFillViewController.swift */; };
+		A9FC59CF1EB7E1700007F21D /* PostConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC59CE1EB7E1700007F21D /* PostConfirmViewController.swift */; };
+		A9FC59D11EB7E97D0007F21D /* PostConfirmUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC59D01EB7E97D0007F21D /* PostConfirmUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		67CAD2F4F3452BB9E142EF4C /* Pods-Studacom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Studacom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Studacom/Pods-Studacom.debug.xcconfig"; sourceTree = "<group>"; };
 		8EBE23C76A9775D4FDBA6C93 /* Pods_Studacom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Studacom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B17CD6C3F50DD876F199CC /* Pods-Studacom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Studacom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Studacom/Pods-Studacom.release.xcconfig"; sourceTree = "<group>"; };
+		A932D6521EB9E1F400DE856F /* PostFillUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFillUserViewController.swift; sourceTree = "<group>"; };
+		A932D6541EBA285F00DE856F /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		A93DEABD1E9294B800796D16 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		A93ECCB21E82F67B00DE6413 /* Studacom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studacom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93ECCB51E82F67B00DE6413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,9 +58,6 @@
 		A93ECCC41E82F67B00DE6413 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9577AA51E8D37A5001399B8 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		A9577AA71E8D4DD8001399B8 /* HelpSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpSecondViewController.swift; sourceTree = "<group>"; };
-		A9577AA91E8D5214001399B8 /* HelpThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpThirdViewController.swift; sourceTree = "<group>"; };
-		A9577AAB1E8D5566001399B8 /* HelpFourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpFourthViewController.swift; sourceTree = "<group>"; };
-		A9577AAD1E8D557A001399B8 /* HelpFifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpFifthViewController.swift; sourceTree = "<group>"; };
 		A96A29EB1E8424B700FDEBD9 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		A96A29ED1E8424F900FDEBD9 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		A96A29F01E842A0100FDEBD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +79,9 @@
 		A9EF211C1EACF757005AA268 /* SearchUserResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserResultsViewController.swift; sourceTree = "<group>"; };
 		A9F788561EA6603800B77B8C /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		A9F788581EA67EF900B77B8C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		A9FC59CC1EB7E1290007F21D /* PostFillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFillViewController.swift; sourceTree = "<group>"; };
+		A9FC59CE1EB7E1700007F21D /* PostConfirmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostConfirmViewController.swift; sourceTree = "<group>"; };
+		A9FC59D01EB7E97D0007F21D /* PostConfirmUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostConfirmUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,16 +141,18 @@
 				A96A29F21E842A2600FDEBD9 /* FavouritesViewController.swift */,
 				A9577AA51E8D37A5001399B8 /* UserViewController.swift */,
 				A96A29EB1E8424B700FDEBD9 /* PostViewController.swift */,
+				A9FC59CC1EB7E1290007F21D /* PostFillViewController.swift */,
+				A932D6521EB9E1F400DE856F /* PostFillUserViewController.swift */,
+				A9FC59CE1EB7E1700007F21D /* PostConfirmViewController.swift */,
+				A9FC59D01EB7E97D0007F21D /* PostConfirmUserViewController.swift */,
 				A96A29ED1E8424F900FDEBD9 /* HelpViewController.swift */,
 				A9577AA71E8D4DD8001399B8 /* HelpSecondViewController.swift */,
-				A9577AA91E8D5214001399B8 /* HelpThirdViewController.swift */,
-				A9577AAB1E8D5566001399B8 /* HelpFourthViewController.swift */,
-				A9577AAD1E8D557A001399B8 /* HelpFifthViewController.swift */,
 				A96A29F41E845E7E00FDEBD9 /* MapViewController.swift */,
 				A96A29F81E84823000FDEBD9 /* SearchViewController.swift */,
 				A9D6F3D81E8E793900EDBEA1 /* SearchResultsViewController.swift */,
 				A9EF211C1EACF757005AA268 /* SearchUserResultsViewController.swift */,
 				A9EF211A1EACF742005AA268 /* SearchAccommodationResultsViewController.swift */,
+				A932D6541EBA285F00DE856F /* CategoryViewController.swift */,
 				A9D2FC471EA7DD1D0014729B /* BrowseViewController.swift */,
 				A99332801E893EB800ECF659 /* PropertyInfoViewController.swift */,
 				A9CEB7981E8AB531002CE794 /* PropertyInfoSecondViewController.swift */,
@@ -291,21 +297,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9FC59D11EB7E97D0007F21D /* PostConfirmUserViewController.swift in Sources */,
 				A96A29EE1E8424F900FDEBD9 /* HelpViewController.swift in Sources */,
 				A9577AA61E8D37A5001399B8 /* UserViewController.swift in Sources */,
 				A93DEABE1E9294B800796D16 /* CustomCell.swift in Sources */,
 				A96A29EC1E8424B700FDEBD9 /* PostViewController.swift in Sources */,
-				A9577AAE1E8D557A001399B8 /* HelpFifthViewController.swift in Sources */,
-				A9577AAA1E8D5214001399B8 /* HelpThirdViewController.swift in Sources */,
 				A9EF211B1EACF742005AA268 /* SearchAccommodationResultsViewController.swift in Sources */,
 				A96A29F91E84823000FDEBD9 /* SearchViewController.swift in Sources */,
 				A93ECCB81E82F67B00DE6413 /* MenuViewController.swift in Sources */,
-				A9577AAC1E8D5566001399B8 /* HelpFourthViewController.swift in Sources */,
 				A9D6F3D91E8E793900EDBEA1 /* SearchResultsViewController.swift in Sources */,
+				A9FC59CF1EB7E1700007F21D /* PostConfirmViewController.swift in Sources */,
 				A9CEB79B1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift in Sources */,
 				A93ECCB61E82F67B00DE6413 /* AppDelegate.swift in Sources */,
+				A932D6531EB9E1F400DE856F /* PostFillUserViewController.swift in Sources */,
 				A99332811E893EB800ECF659 /* PropertyInfoViewController.swift in Sources */,
 				A96A29F31E842A2600FDEBD9 /* FavouritesViewController.swift in Sources */,
+				A9FC59CD1EB7E1290007F21D /* PostFillViewController.swift in Sources */,
 				A9D2FC481EA7DD1D0014729B /* BrowseViewController.swift in Sources */,
 				A93ECCBE1E82F67B00DE6413 /* Studacom.xcdatamodeld in Sources */,
 				A977FD2E1E856FC800E61D7A /* Accommodation.swift in Sources */,
@@ -314,6 +321,7 @@
 				A9577AA81E8D4DD8001399B8 /* HelpSecondViewController.swift in Sources */,
 				A9F788591EA67EF900B77B8C /* Comment.swift in Sources */,
 				A96A29F51E845E7E00FDEBD9 /* MapViewController.swift in Sources */,
+				A932D6551EBA285F00DE856F /* CategoryViewController.swift in Sources */,
 				A977FD301E85867200E61D7A /* User.swift in Sources */,
 				A9EF211D1EACF757005AA268 /* SearchUserResultsViewController.swift in Sources */,
 				A9F788571EA6603800B77B8C /* CommentsViewController.swift in Sources */,

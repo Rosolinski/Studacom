@@ -28,11 +28,13 @@
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>New Warning</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Please tap "allow" to permit location services</string>
+	<string>Please tap &quot;allow&quot; to permit location services</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Your image is now in use, breh!</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

@@ -13,7 +13,7 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Post an Offer"
+        self.title = "Post Offer"
     }
     
     @IBAction func goToFirstPropertyVCBtnTapped(_ sender: Any) {

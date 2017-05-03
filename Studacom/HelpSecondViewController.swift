@@ -13,13 +13,12 @@ class HelpSecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "About Studacom"
+        self.title = ""
     
     }
     
     @IBAction func dismissCurrentVC(_ sender: Any) {
     dismiss(animated: true, completion: nil)
+        
     }
-
-    
 }
