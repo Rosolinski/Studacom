@@ -24,7 +24,7 @@ class MenuViewController: UIViewController {
         
         mainScrollView.frame = view.frame
         
-        imageArray = [#imageLiteral(resourceName: "StudacomMenu1"), #imageLiteral(resourceName: "StudacomMenu2"), #imageLiteral(resourceName: "StudacomMenu3"),#imageLiteral(resourceName: "StudacomMenu4"), #imageLiteral(resourceName: "StudacomMenu1b"), #imageLiteral(resourceName: "StudacomMenu2"), #imageLiteral(resourceName: "StudacomMenu3"), #imageLiteral(resourceName: "StudacomMenu4"), #imageLiteral(resourceName: "StudacomMenu1b"), #imageLiteral(resourceName: "StudacomMenu2"), #imageLiteral(resourceName: "StudacomMenu3"), #imageLiteral(resourceName: "StudacomMenu4"), #imageLiteral(resourceName: "StudacomMenu1b"), #imageLiteral(resourceName: "StudacomMenu2"), #imageLiteral(resourceName: "StudacomMenu3"), #imageLiteral(resourceName: "StudacomMenu4b")]
+        imageArray = [#imageLiteral(resourceName: "StudacomMenu1"), #imageLiteral(resourceName: "StudacomMenu2"), #imageLiteral(resourceName: "StudacomMenu3"), #imageLiteral(resourceName: "StudacomMenu4b")]
         
         for i in 0..<imageArray.count{
         
@@ -36,6 +36,7 @@ class MenuViewController: UIViewController {
             
             mainScrollView.contentSize.width = mainScrollView.frame.width * CGFloat(i + 1)
             mainScrollView.addSubview(imageView)
+            
         }
         
         let backButton = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: navigationController, action: nil)

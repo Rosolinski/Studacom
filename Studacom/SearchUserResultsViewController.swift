@@ -10,9 +10,9 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class SearchUserResultsViewController: UIViewController, UITableViewDelegate {
+class SearchUserResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
-    var users = [User]()
+    let users: [String] = ["EdgeLord1991", "Zero119", "NightPanther66", "WildCat650", "Panderman", "ZooZoo92", "Miahay12", "EddyJay92", "Ricardo66", "GranthamG", "MGC", "SecretaMento1", "Varcher1991", "Milly72", "AdamScott90"]
     
     @IBOutlet var tableView: UITableView!
     var refreshAlert: UIAlertController?
@@ -23,45 +23,28 @@ class SearchUserResultsViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "User offers"
+        self.title = "Users"
         
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
-        self.tableView.reloadData()
         tableView.delegate = self
-        loadUser()
-        
+        tableView.dataSource = self
     }
     
-    func loadUser() {
-        Alamofire.request("http://139.59.174.112/api/users.json").response { [unowned self] response in
-            
-            guard let data = response.data else { return }
-            
-            let json = JSON(data: data)
-            
-            for userData in json["data"].arrayValue {
-                let user = User(json: userData)
-            }
-        
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: String) -> String {
-        return self.user.id
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
         
-        cell.textLabel!.text = "\(user.id)"
+        cell.textLabel?.text = self.users[indexPath.row]
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Cell number \(indexPath.row) tapped.")
-        }
     }
-
 }

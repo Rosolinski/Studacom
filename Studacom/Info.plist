@@ -34,7 +34,7 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Your image is now in use, breh!</string>
+	<string>Please select &quot;OK&quot; if you allow this app to access your images.</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

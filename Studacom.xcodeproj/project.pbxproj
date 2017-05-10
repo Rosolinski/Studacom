@@ -10,6 +10,8 @@
 		7CFAC9A97B57443FC1ABDAB4 /* Pods_Studacom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBE23C76A9775D4FDBA6C93 /* Pods_Studacom.framework */; };
 		A932D6531EB9E1F400DE856F /* PostFillUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932D6521EB9E1F400DE856F /* PostFillUserViewController.swift */; };
 		A932D6551EBA285F00DE856F /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932D6541EBA285F00DE856F /* CategoryViewController.swift */; };
+		A933E2A51EC302DA00A332AE /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E2A41EC302DA00A332AE /* Favourite.swift */; };
+		A933E2A71EC316E000A332AE /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E2A61EC316E000A332AE /* UIImageView+Extension.swift */; };
 		A93DEABE1E9294B800796D16 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DEABD1E9294B800796D16 /* CustomCell.swift */; };
 		A93ECCB61E82F67B00DE6413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ECCB51E82F67B00DE6413 /* AppDelegate.swift */; };
 		A93ECCB81E82F67B00DE6413 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ECCB71E82F67B00DE6413 /* MenuViewController.swift */; };
@@ -48,6 +50,8 @@
 		A2B17CD6C3F50DD876F199CC /* Pods-Studacom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Studacom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Studacom/Pods-Studacom.release.xcconfig"; sourceTree = "<group>"; };
 		A932D6521EB9E1F400DE856F /* PostFillUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFillUserViewController.swift; sourceTree = "<group>"; };
 		A932D6541EBA285F00DE856F /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		A933E2A41EC302DA00A332AE /* Favourite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
+		A933E2A61EC316E000A332AE /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		A93DEABD1E9294B800796D16 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		A93ECCB21E82F67B00DE6413 /* Studacom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studacom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93ECCB51E82F67B00DE6413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 				A9D6F3DA1E8E7DA600EDBEA1 /* CustomAnnotation.swift */,
 				A93DEABD1E9294B800796D16 /* CustomCell.swift */,
 				A977FD2D1E856FC800E61D7A /* Accommodation.swift */,
+				A933E2A61EC316E000A332AE /* UIImageView+Extension.swift */,
+				A933E2A41EC302DA00A332AE /* Favourite.swift */,
 				A977FD2F1E85867200E61D7A /* User.swift */,
 				A9F788581EA67EF900B77B8C /* Comment.swift */,
 				A93ECCC11E82F67B00DE6413 /* LaunchScreen.storyboard */,
@@ -312,6 +318,7 @@
 				A932D6531EB9E1F400DE856F /* PostFillUserViewController.swift in Sources */,
 				A99332811E893EB800ECF659 /* PropertyInfoViewController.swift in Sources */,
 				A96A29F31E842A2600FDEBD9 /* FavouritesViewController.swift in Sources */,
+				A933E2A51EC302DA00A332AE /* Favourite.swift in Sources */,
 				A9FC59CD1EB7E1290007F21D /* PostFillViewController.swift in Sources */,
 				A9D2FC481EA7DD1D0014729B /* BrowseViewController.swift in Sources */,
 				A93ECCBE1E82F67B00DE6413 /* Studacom.xcdatamodeld in Sources */,
@@ -319,6 +326,7 @@
 				A9885E111E99139100BF696F /* OtherUserViewController.swift in Sources */,
 				A9CEB7991E8AB531002CE794 /* PropertyInfoSecondViewController.swift in Sources */,
 				A9577AA81E8D4DD8001399B8 /* HelpSecondViewController.swift in Sources */,
+				A933E2A71EC316E000A332AE /* UIImageView+Extension.swift in Sources */,
 				A9F788591EA67EF900B77B8C /* Comment.swift in Sources */,
 				A96A29F51E845E7E00FDEBD9 /* MapViewController.swift in Sources */,
 				A932D6551EBA285F00DE856F /* CategoryViewController.swift in Sources */,

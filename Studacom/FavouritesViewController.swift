@@ -11,6 +11,10 @@ import UIKit
 
 class FavouritesViewController: UIViewController {
     
+    var favourites = [Accommodation]()
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Favourites"

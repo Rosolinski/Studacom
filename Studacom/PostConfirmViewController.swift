@@ -11,6 +11,7 @@ import UIKit
 
 class PostConfirmViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate  {
     
+    @IBOutlet weak var postCodeTextView: UITextField!
     
     @IBOutlet weak var myPropertyImageView: UIImageView!
     
@@ -46,4 +47,28 @@ class PostConfirmViewController: UIViewController, UINavigationControllerDelegat
         self.title = "Confirm Post"
         self.hideKeyboardWhenTappedAround()
     }
+    
+    @IBAction func homeCheckVCBtnTapped(_ sender: Any) {
+        guard let postCodeTextView = postCodeTextView.text else { return}
+        
+        guard postCodeTextView.characters.count > 0 else {
+            
+            print("Please fill in the textfield")
+            
+            return
+        }
+        
+        let alertController = UIAlertController (title: "Post successful", message: "Your offer is now on our database. It will be reviewed and uploaded shortly.", preferredStyle: .alert)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+            self.performSegue(withIdentifier: "goHomeSegue", sender: self)
+        
+        self.performSegue(withIdentifier: "goHomeSegue", sender: nil)
+            print("Accommodation post complete");}
+        alertController.addAction(OKAction)
+        
+    }
+    
 }

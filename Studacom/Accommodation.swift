@@ -18,6 +18,8 @@ class Accommodation {
     var coordinate: CLLocationCoordinate2D!
     var id: String!
     var accommodation_type: String!
+    var images = [String]()
+    var mainImage: String!
     
     init(json: JSON) {
         
@@ -26,6 +28,15 @@ class Accommodation {
         coordinate = CLLocationCoordinate2D(latitude: json["lat"].doubleValue, longitude: json["lng"].doubleValue)
         id = json["id"].stringValue
         accommodation_type = json["accommodation_type"].stringValue
+        
+        for image in json["accommodation_images"].arrayValue {
+            if image["main_image"].boolValue {
+                mainImage = "http://139.59.174.112/img/posts/" + image["name"].stringValue + ".jpg"
+            }
+            images.append("http://139.59.174.112/img/posts/" + image["name"].stringValue + ".jpg")
+        }
+        
+        print(images)
         
     }
     

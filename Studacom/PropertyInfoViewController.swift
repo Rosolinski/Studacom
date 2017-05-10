@@ -18,14 +18,30 @@ class PropertyInfoViewController: UIViewController {
     @IBOutlet var typeLabel: UILabel!
     var accommodation: Accommodation!
     
+    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var imageButton: UIButton!
+  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "\(accommodation.id!)"
+        self.title = "Property"
         priceLabel.text = "£\(accommodation.price!)pcm"
         typeLabel.text = "\(accommodation.accommodation_type!)"
         
+        
         print(accommodation.description)
         print(accommodation.coordinate)
+        
+        loadImages()
+    }
+    
+    func loadImages() {
+        imageView.imageFromServerURL(urlString: accommodation.mainImage)
+
+        for image in accommodation.images {
+            imageView.imageFromServerURL(urlString: image)
+        }
         
     }
     
