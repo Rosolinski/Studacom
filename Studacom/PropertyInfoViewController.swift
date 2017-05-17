@@ -12,7 +12,8 @@ import CoreLocation
 import Alamofire
 import SwiftyJSON
 
-class PropertyInfoViewController: UIViewController {
+class PropertyInfoViewController: UIViewController, UIGestureRecognizerDelegate {
+    
     @IBOutlet var priceLabel: UILabel!
     
     @IBOutlet var typeLabel: UILabel!
@@ -20,15 +21,24 @@ class PropertyInfoViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var imageButton: UIButton!
-  
+    @IBOutlet var galleryImageView: [UIImageView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Property"
-        priceLabel.text = "£\(accommodation.price!)pcm"
-        typeLabel.text = "\(accommodation.accommodation_type!)"
+
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PropertyInfoViewController.imageTapped(_:)))
         
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(tapGestureRecognizer)
+        
+        for imageView in galleryImageView {
+            imageView.isUserInteractionEnabled = true
+            imageView.addGestureRecognizer(tapGestureRecognizer)
+        }
+        
+        priceLabel.text = "£\(accommodation.price!) pcm"
+        typeLabel.text = "\(accommodation.accommodation_type!)"
         
         print(accommodation.description)
         print(accommodation.coordinate)
@@ -39,8 +49,9 @@ class PropertyInfoViewController: UIViewController {
     func loadImages() {
         imageView.imageFromServerURL(urlString: accommodation.mainImage)
 
-        for image in accommodation.images {
-            imageView.imageFromServerURL(urlString: image)
+        for (index, image) in accommodation.images.enumerated() {
+            guard index < 4 else { return }
+            galleryImageView[index].imageFromServerURL(urlString: image)
         }
         
     }
@@ -64,6 +75,26 @@ class PropertyInfoViewController: UIViewController {
         
         alertController.addAction(OKAction)
         
+        }
+
+    func imageTapped(_ sender: UITapGestureRecognizer) {
+        let imageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: imageView.image)
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+        self.navigationController?.isNavigationBarHidden = false
+        self.tabBarController?.tabBar.isHidden = false
+        sender.view?.removeFromSuperview()
     }
 
     @IBAction func goToSecondVCBtnTapped(_ sender: Any) {

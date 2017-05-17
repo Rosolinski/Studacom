@@ -8,14 +8,48 @@
 
 import Foundation
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class SearchViewController: UIViewController, UISearchBarDelegate {
+class SearchViewController: UIViewController, UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var refreshAlert: UIAlertController?
+    let cellReuseIdentifier = "cell"
+    
+    var accommodation: Accommodation!
+    
+    let accommodationList: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    var accommodationFilteredList = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Search"
         self.hideKeyboardWhenTappedAround()
+        
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+    }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.accommodationList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
+        
+        cell.textLabel?.text = self.accommodationList[indexPath.row]
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Cell number \(indexPath.row) tapped.")
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
@@ -25,6 +59,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         textField.resignFirstResponder()  //if desired
         performAction()
         return true
+        
     }
     
     func performAction() {

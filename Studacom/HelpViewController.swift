@@ -29,8 +29,12 @@ class HelpViewController: UIViewController {
     performSegue(withIdentifier: "goToFourthHelpSegue", sender: self)
     }
     
-    @IBAction func goToFifthHelpVCBtnTapped(_ sender: Any) {
+    @IBAction func goToPostHelpVCBtnTapped(_ sender: Any) {
     performSegue(withIdentifier: "goToFifthHelpSegue", sender: self)
+    }
+    
+    @IBAction func goToFifthHelpVCBtnTapped(_ sender: Any) {
+    performSegue(withIdentifier: "goToSixthHelpSegue", sender: self)
     }
     
     }

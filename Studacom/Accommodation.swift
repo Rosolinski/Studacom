@@ -20,6 +20,7 @@ class Accommodation {
     var accommodation_type: String!
     var images = [String]()
     var mainImage: String!
+    var galleryImage: String!
     
     init(json: JSON) {
         

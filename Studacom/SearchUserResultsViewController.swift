@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class SearchUserResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
-    let users: [String] = ["EdgeLord1991", "Zero119", "NightPanther66", "WildCat650", "Panderman", "ZooZoo92", "Miahay12", "EddyJay92", "Ricardo66", "GranthamG", "MGC", "SecretaMento1", "Varcher1991", "Milly72", "AdamScott90"]
+    let users: [String] = ["EdgeLord1991", "Zero119", "NightPanda66", "WildCat650", "Panderman", "ZooZoo92", "Miahay12", "EddyJay92", "Ricardo66", "GranthamG", "MGC", "SecretaMento1", "Varcher1991", "Milly72", "AdamScott90"]
     
     @IBOutlet var tableView: UITableView!
     var refreshAlert: UIAlertController?

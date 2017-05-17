@@ -12,6 +12,7 @@
 		A932D6551EBA285F00DE856F /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932D6541EBA285F00DE856F /* CategoryViewController.swift */; };
 		A933E2A51EC302DA00A332AE /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E2A41EC302DA00A332AE /* Favourite.swift */; };
 		A933E2A71EC316E000A332AE /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E2A61EC316E000A332AE /* UIImageView+Extension.swift */; };
+		A933E2A91EC37FA500A332AE /* blueHouse.png in Resources */ = {isa = PBXBuildFile; fileRef = A933E2A81EC37FA500A332AE /* blueHouse.png */; };
 		A93DEABE1E9294B800796D16 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93DEABD1E9294B800796D16 /* CustomCell.swift */; };
 		A93ECCB61E82F67B00DE6413 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ECCB51E82F67B00DE6413 /* AppDelegate.swift */; };
 		A93ECCB81E82F67B00DE6413 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93ECCB71E82F67B00DE6413 /* MenuViewController.swift */; };
@@ -30,6 +31,7 @@
 		A977FD301E85867200E61D7A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A977FD2F1E85867200E61D7A /* User.swift */; };
 		A9885E111E99139100BF696F /* OtherUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9885E101E99139100BF696F /* OtherUserViewController.swift */; };
 		A99332811E893EB800ECF659 /* PropertyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99332801E893EB800ECF659 /* PropertyInfoViewController.swift */; };
+		A99C88031ECC3F7C0060037B /* OffersViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99C88021ECC3F7C0060037B /* OffersViewControllers.swift */; };
 		A9CEB7991E8AB531002CE794 /* PropertyInfoSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CEB7981E8AB531002CE794 /* PropertyInfoSecondViewController.swift */; };
 		A9CEB79B1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CEB79A1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift */; };
 		A9D2FC481EA7DD1D0014729B /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D2FC471EA7DD1D0014729B /* BrowseViewController.swift */; };
@@ -52,6 +54,7 @@
 		A932D6541EBA285F00DE856F /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		A933E2A41EC302DA00A332AE /* Favourite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
 		A933E2A61EC316E000A332AE /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		A933E2A81EC37FA500A332AE /* blueHouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueHouse.png; path = Studacom/Assets.xcassets/BlueHouse.imageset/blueHouse.png; sourceTree = "<group>"; };
 		A93DEABD1E9294B800796D16 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		A93ECCB21E82F67B00DE6413 /* Studacom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studacom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93ECCB51E82F67B00DE6413 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +77,7 @@
 		A977FD2F1E85867200E61D7A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A9885E101E99139100BF696F /* OtherUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherUserViewController.swift; sourceTree = "<group>"; };
 		A99332801E893EB800ECF659 /* PropertyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyInfoViewController.swift; sourceTree = "<group>"; };
+		A99C88021ECC3F7C0060037B /* OffersViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersViewControllers.swift; sourceTree = "<group>"; };
 		A9CEB7981E8AB531002CE794 /* PropertyInfoSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyInfoSecondViewController.swift; sourceTree = "<group>"; };
 		A9CEB79A1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyInfoThirdViewController.swift; sourceTree = "<group>"; };
 		A9D2FC471EA7DD1D0014729B /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 			children = (
 				A96A29F61E84772600FDEBD9 /* BU.gpx */,
 				A96A29F71E84773600FDEBD9 /* Winton_Route.gpx */,
+				A933E2A81EC37FA500A332AE /* blueHouse.png */,
 				A93ECCB41E82F67B00DE6413 /* Studacom */,
 				A93ECCB31E82F67B00DE6413 /* Products */,
 				0DF89B561CC620A915014651 /* Pods */,
@@ -153,9 +158,9 @@
 				A9577AA71E8D4DD8001399B8 /* HelpSecondViewController.swift */,
 				A96A29F41E845E7E00FDEBD9 /* MapViewController.swift */,
 				A96A29F81E84823000FDEBD9 /* SearchViewController.swift */,
+				A9EF211A1EACF742005AA268 /* SearchAccommodationResultsViewController.swift */,
 				A9D6F3D81E8E793900EDBEA1 /* SearchResultsViewController.swift */,
 				A9EF211C1EACF757005AA268 /* SearchUserResultsViewController.swift */,
-				A9EF211A1EACF742005AA268 /* SearchAccommodationResultsViewController.swift */,
 				A932D6541EBA285F00DE856F /* CategoryViewController.swift */,
 				A9D2FC471EA7DD1D0014729B /* BrowseViewController.swift */,
 				A99332801E893EB800ECF659 /* PropertyInfoViewController.swift */,
@@ -163,6 +168,7 @@
 				A9CEB79A1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift */,
 				A9F788561EA6603800B77B8C /* CommentsViewController.swift */,
 				A9885E101E99139100BF696F /* OtherUserViewController.swift */,
+				A99C88021ECC3F7C0060037B /* OffersViewControllers.swift */,
 				A96A29EF1E842A0100FDEBD9 /* Main.storyboard */,
 				A93ECCBF1E82F67B00DE6413 /* Assets.xcassets */,
 				A9D6F3DA1E8E7DA600EDBEA1 /* CustomAnnotation.swift */,
@@ -242,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A933E2A91EC37FA500A332AE /* blueHouse.png in Resources */,
 				A96A29F11E842A0100FDEBD9 /* Main.storyboard in Resources */,
 				A93ECCC31E82F67B00DE6413 /* LaunchScreen.storyboard in Resources */,
 				A93ECCC01E82F67B00DE6413 /* Assets.xcassets in Resources */,
@@ -316,6 +323,7 @@
 				A9CEB79B1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift in Sources */,
 				A93ECCB61E82F67B00DE6413 /* AppDelegate.swift in Sources */,
 				A932D6531EB9E1F400DE856F /* PostFillUserViewController.swift in Sources */,
+				A99C88031ECC3F7C0060037B /* OffersViewControllers.swift in Sources */,
 				A99332811E893EB800ECF659 /* PropertyInfoViewController.swift in Sources */,
 				A96A29F31E842A2600FDEBD9 /* FavouritesViewController.swift in Sources */,
 				A933E2A51EC302DA00A332AE /* Favourite.swift in Sources */,

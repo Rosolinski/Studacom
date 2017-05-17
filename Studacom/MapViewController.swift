@@ -22,8 +22,6 @@ class MapViewController: UIViewController {
     
     var accommodations = [Accommodation]()
     
-    let winton = CLLocationCoordinate2D(latitude: 50.741, longitude: -1.877)
-    
     @IBOutlet weak var PropertyMap: MKMapView!
     
     override func viewDidLoad() {
@@ -109,12 +107,17 @@ extension MapViewController: MKMapViewDelegate {
             anView?.canShowCallout = true
             anView?.isDraggable = true
             anView?.pinTintColor = .blue
-            
             let rightButton: AnyObject! = UIButton(type: UIButtonType.detailDisclosure)
             anView?.rightCalloutAccessoryView = rightButton as? UIView
         }
         else {
             anView?.annotation = annotation
+            anView?.image = UIImage(named: "blueHouse")
+        }
+        
+        if let anView = anView {
+            // Configure your annotation view here
+            anView.canShowCallout = true
         }
         
         return anView

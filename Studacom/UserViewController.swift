@@ -49,6 +49,10 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
         
     }
     
+    @IBAction func goToOffersVCBtnTapped(_ sender: Any) {
+            performSegue(withIdentifier: "offerSegue", sender: self)
+    }
+    
     @IBAction func goToFavouritesVCBtnTapped(_ sender: Any) {
             performSegue(withIdentifier: "favouriteSegue", sender: self)
     }
