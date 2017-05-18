@@ -23,18 +23,42 @@ class PropertyInfoViewController: UIViewController, UIGestureRecognizerDelegate 
     
     @IBOutlet var galleryImageView: [UIImageView]!
     
+    @IBOutlet weak var secondImageView: UIImageView!
+    
+    @IBOutlet weak var thirdImageView: UIImageView!
+    
+    @IBOutlet weak var fourthImageView: UIImageView!
+    
+    @IBOutlet weak var mainImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Property"
 
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PropertyInfoViewController.imageTapped(_:)))
+        let secondTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PropertyInfoViewController.secondImageTapped(_:)))
+        let thirdTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PropertyInfoViewController.thirdImageTapped(_:)))
+        let fourthTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PropertyInfoViewController.thirdImageTapped(_:)))
+        let mainTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PropertyInfoViewController.mainImageTapped(_:)))
         
         imageView.isUserInteractionEnabled = true
         imageView.addGestureRecognizer(tapGestureRecognizer)
         
+        secondImageView.isUserInteractionEnabled = true
+        secondImageView.addGestureRecognizer(secondTapGestureRecognizer)
+        
+        thirdImageView.isUserInteractionEnabled = true
+        thirdImageView.addGestureRecognizer(thirdTapGestureRecognizer)
+        
+        fourthImageView.isUserInteractionEnabled = true
+        fourthImageView.addGestureRecognizer(fourthTapGestureRecognizer)
+        
+        mainImageView.isUserInteractionEnabled = true
+        mainImageView.addGestureRecognizer(mainTapGestureRecognizer)
+        
         for imageView in galleryImageView {
             imageView.isUserInteractionEnabled = true
-            imageView.addGestureRecognizer(tapGestureRecognizer)
         }
         
         priceLabel.text = "£\(accommodation.price!) pcm"
@@ -76,10 +100,66 @@ class PropertyInfoViewController: UIViewController, UIGestureRecognizerDelegate 
         alertController.addAction(OKAction)
         
         }
-
+    
     func imageTapped(_ sender: UITapGestureRecognizer) {
         let imageView = sender.view as! UIImageView
         let newImageView = UIImageView(image: imageView.image)
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    func secondImageTapped(_ sender: UITapGestureRecognizer) {
+        let secondImageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: secondImageView.image)
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    func thirdImageTapped(_ sender: UITapGestureRecognizer) {
+        let thirdImageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: thirdImageView.image)
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    func fourthImageTapped(_ sender: UITapGestureRecognizer) {
+        let fourthImageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: fourthImageView.image)
+        newImageView.frame = UIScreen.main.bounds
+        newImageView.backgroundColor = .black
+        newImageView.contentMode = .scaleAspectFit
+        newImageView.isUserInteractionEnabled = true
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+        newImageView.addGestureRecognizer(tap)
+        self.view.addSubview(newImageView)
+        self.navigationController?.isNavigationBarHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    func mainImageTapped(_ sender: UITapGestureRecognizer) {
+        let mainImageView = sender.view as! UIImageView
+        let newImageView = UIImageView(image: mainImageView.image)
         newImageView.frame = UIScreen.main.bounds
         newImageView.backgroundColor = .black
         newImageView.contentMode = .scaleAspectFit
