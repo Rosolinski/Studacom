@@ -11,6 +11,7 @@ import SwiftyJSON
 import CoreLocation
 import Alamofire
 import SwiftyJSON
+import PCLBlurEffectAlert
 
 class PropertyInfoViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -89,15 +90,19 @@ class PropertyInfoViewController: UIViewController, UIGestureRecognizerDelegate 
     
     @IBAction func showBtn(_ sender: Any) {
         
-        let alertController = UIAlertController (title: "Add successful", message: "\(accommodation.accommodation_type!) added to favourites", preferredStyle: .alert)
+        let alert = PCLBlurEffectAlert.Controller(title: "Add successful", message: "\(accommodation.accommodation_type!) added to favourites", effect: UIBlurEffect(style: .dark) , style: .alert)
+        let alertBtn = PCLBlurEffectAlert.Action(title: "OK", style: .default, handler: nil)
         
-        self.present(alertController, animated: true, completion: nil)
+        alert.addAction(alertBtn)
         
-        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+        alert.configure(cornerRadius: 20)
+        alert.configure(overlayBackgroundColor: UIColor(red: 0, green: 0, blue: 250, alpha: 0.0005))
+        alert.configure(titleFont: UIFont.systemFont(ofSize: 30), titleColor: UIColor.white)
+        alert.configure(messageFont: UIFont.systemFont(ofSize: 15), messageColor: UIColor.white)
+        
             print("Added \(self.accommodation.id!) to favourites!");
-        }
         
-        alertController.addAction(OKAction)
+        alert.show()
         
         }
     
@@ -187,8 +192,6 @@ class PropertyInfoViewController: UIViewController, UIGestureRecognizerDelegate 
     }
 
 }
-
-
 
 
 

@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>PCLBlurEffectAlert.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Studacom.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4A2BA0A7536DCC92EB68F46E570931F6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8D2B0DDF205E213A0B763B5505819C29</key>
+		<key>AEC7CB7CE8AAA879DDD8D3FA54832E70</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C58BDFD39F11148ED1ABD2F13C9027EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D560CD365CD24C9304C7E1ED1B37629B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

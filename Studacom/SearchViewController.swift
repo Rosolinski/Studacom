@@ -11,16 +11,57 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class SearchViewController: UIViewController, UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate, UITableViewDataSource {
+class SearchViewController: UIViewController, UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate, UITableViewDataSource, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    @IBOutlet var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet var distancePickerView: UIPickerView!
+    @IBOutlet var pricePickerView: UIPickerView!
+    @IBOutlet var spacePickerView: UIPickerView!
+    
+    var picker = UIPickerView()
+    
+    let distanceData = ["Distance from BU ↕ ", "1", "2", "3"]
+    let priceData = ["Rent (pcm) ↕ ","£0 – 100", "£101 – 200", "£201 – 300", "£301 – 400", "£401 – 500", "£500 +"]
+    let spaceData = ["Number of spaces ↕ ", "1", "2", "3", "4"]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView == pricePickerView {
+        return priceData.count
+        } else if pickerView == spacePickerView{
+        return spaceData.count
+        } else if pickerView == distancePickerView{
+            return distanceData.count
+        }
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == pricePickerView {
+            return priceData[row]
+        } else if pickerView == spacePickerView{
+            return spaceData[row]
+        } else if pickerView == distancePickerView{
+            return distanceData[row]
+        }
+        return ""
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+
+    }
     
     var refreshAlert: UIAlertController?
     let cellReuseIdentifier = "cell"
     
     var accommodation: Accommodation!
     
-    let accommodationList: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    var accommodations = [Accommodation]()
     var accommodationFilteredList = [String]()
     
     override func viewDidLoad() {
@@ -32,18 +73,40 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchDispl
         
         tableView.delegate = self
         tableView.dataSource = self
+
+        loadAccommodation()
         
     }
     
+    func loadAccommodation() {
+        Alamofire.request("http://139.59.174.112/api/accommodations.json").response { [unowned self] response in
+            
+            guard let data = response.data else { return }
+            
+            let json = JSON(data: data)
+            
+            for accommodationData in json["data"].arrayValue {
+                let accommodation = Accommodation(json: accommodationData)
+                self.accommodations.append(accommodation)
+            }
+            
+            self.tableView.reloadData()
+        }
+    }
+
+    //tables
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.accommodationList.count
+        return accommodations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
         
-        cell.textLabel?.text = self.accommodationList[indexPath.row]
+        let accommodation = accommodations[indexPath.row]
+        
+        cell.textLabel?.text = accommodation.accommodation_type
         
         return cell
     }
@@ -66,22 +129,5 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchDispl
         
         //action events
     }
-    
-    @IBAction func goToResultsVCBtnTapped(_ sender: Any) {
-    performSegue(withIdentifier: "goToAccomResultsSegue", sender: self)
-    }
-    
-    @IBAction func goToSecondResultsVCBtnTapped(_ sender: Any) {
-    performSegue(withIdentifier: "goToUserResultsSegue", sender: self)
-    }
-    
-    @IBAction func TextFieldPrimaryActionTriggered(_ sender: Any) {
-        print("Search Pressed")
-        performSegue(withIdentifier: "goToResultsSegue", sender: self)
-    }
-    
-    @IBAction func goToSearchResultsVCBtnTapped(_ sender: Any) {
-        print("Search Pressed")
-        performSegue(withIdentifier: "goToResultsSegue", sender: self)
-    }
+
 }

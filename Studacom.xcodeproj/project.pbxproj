@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7CFAC9A97B57443FC1ABDAB4 /* Pods_Studacom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBE23C76A9775D4FDBA6C93 /* Pods_Studacom.framework */; };
 		A932D6531EB9E1F400DE856F /* PostFillUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932D6521EB9E1F400DE856F /* PostFillUserViewController.swift */; };
-		A932D6551EBA285F00DE856F /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932D6541EBA285F00DE856F /* CategoryViewController.swift */; };
 		A933E2A51EC302DA00A332AE /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E2A41EC302DA00A332AE /* Favourite.swift */; };
 		A933E2A71EC316E000A332AE /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933E2A61EC316E000A332AE /* UIImageView+Extension.swift */; };
 		A933E2A91EC37FA500A332AE /* blueHouse.png in Resources */ = {isa = PBXBuildFile; fileRef = A933E2A81EC37FA500A332AE /* blueHouse.png */; };
@@ -32,13 +31,11 @@
 		A9885E111E99139100BF696F /* OtherUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9885E101E99139100BF696F /* OtherUserViewController.swift */; };
 		A99332811E893EB800ECF659 /* PropertyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99332801E893EB800ECF659 /* PropertyInfoViewController.swift */; };
 		A99C88031ECC3F7C0060037B /* OffersViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99C88021ECC3F7C0060037B /* OffersViewControllers.swift */; };
+		A9BAB3D91ED1D65100EAE9C8 /* PostBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BAB3D81ED1D65100EAE9C8 /* PostBrowseViewController.swift */; };
+		A9BAB3DD1ED1E5D300EAE9C8 /* PostBrowseUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BAB3DC1ED1E5D300EAE9C8 /* PostBrowseUsersViewController.swift */; };
 		A9CEB7991E8AB531002CE794 /* PropertyInfoSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CEB7981E8AB531002CE794 /* PropertyInfoSecondViewController.swift */; };
 		A9CEB79B1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CEB79A1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift */; };
-		A9D2FC481EA7DD1D0014729B /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D2FC471EA7DD1D0014729B /* BrowseViewController.swift */; };
-		A9D6F3D91E8E793900EDBEA1 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D6F3D81E8E793900EDBEA1 /* SearchResultsViewController.swift */; };
 		A9D6F3DB1E8E7DA600EDBEA1 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D6F3DA1E8E7DA600EDBEA1 /* CustomAnnotation.swift */; };
-		A9EF211B1EACF742005AA268 /* SearchAccommodationResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF211A1EACF742005AA268 /* SearchAccommodationResultsViewController.swift */; };
-		A9EF211D1EACF757005AA268 /* SearchUserResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF211C1EACF757005AA268 /* SearchUserResultsViewController.swift */; };
 		A9F788571EA6603800B77B8C /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F788561EA6603800B77B8C /* CommentsViewController.swift */; };
 		A9F788591EA67EF900B77B8C /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F788581EA67EF900B77B8C /* Comment.swift */; };
 		A9FC59CD1EB7E1290007F21D /* PostFillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FC59CC1EB7E1290007F21D /* PostFillViewController.swift */; };
@@ -51,7 +48,6 @@
 		8EBE23C76A9775D4FDBA6C93 /* Pods_Studacom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Studacom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2B17CD6C3F50DD876F199CC /* Pods-Studacom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Studacom.release.xcconfig"; path = "Pods/Target Support Files/Pods-Studacom/Pods-Studacom.release.xcconfig"; sourceTree = "<group>"; };
 		A932D6521EB9E1F400DE856F /* PostFillUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFillUserViewController.swift; sourceTree = "<group>"; };
-		A932D6541EBA285F00DE856F /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		A933E2A41EC302DA00A332AE /* Favourite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
 		A933E2A61EC316E000A332AE /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		A933E2A81EC37FA500A332AE /* blueHouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueHouse.png; path = Studacom/Assets.xcassets/BlueHouse.imageset/blueHouse.png; sourceTree = "<group>"; };
@@ -78,13 +74,11 @@
 		A9885E101E99139100BF696F /* OtherUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherUserViewController.swift; sourceTree = "<group>"; };
 		A99332801E893EB800ECF659 /* PropertyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyInfoViewController.swift; sourceTree = "<group>"; };
 		A99C88021ECC3F7C0060037B /* OffersViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersViewControllers.swift; sourceTree = "<group>"; };
+		A9BAB3D81ED1D65100EAE9C8 /* PostBrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostBrowseViewController.swift; sourceTree = "<group>"; };
+		A9BAB3DC1ED1E5D300EAE9C8 /* PostBrowseUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostBrowseUsersViewController.swift; sourceTree = "<group>"; };
 		A9CEB7981E8AB531002CE794 /* PropertyInfoSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyInfoSecondViewController.swift; sourceTree = "<group>"; };
 		A9CEB79A1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyInfoThirdViewController.swift; sourceTree = "<group>"; };
-		A9D2FC471EA7DD1D0014729B /* BrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
-		A9D6F3D81E8E793900EDBEA1 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		A9D6F3DA1E8E7DA600EDBEA1 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
-		A9EF211A1EACF742005AA268 /* SearchAccommodationResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAccommodationResultsViewController.swift; sourceTree = "<group>"; };
-		A9EF211C1EACF757005AA268 /* SearchUserResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserResultsViewController.swift; sourceTree = "<group>"; };
 		A9F788561EA6603800B77B8C /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		A9F788581EA67EF900B77B8C /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		A9FC59CC1EB7E1290007F21D /* PostFillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFillViewController.swift; sourceTree = "<group>"; };
@@ -150,19 +144,16 @@
 				A96A29F21E842A2600FDEBD9 /* FavouritesViewController.swift */,
 				A9577AA51E8D37A5001399B8 /* UserViewController.swift */,
 				A96A29EB1E8424B700FDEBD9 /* PostViewController.swift */,
+				A96A29F81E84823000FDEBD9 /* SearchViewController.swift */,
 				A9FC59CC1EB7E1290007F21D /* PostFillViewController.swift */,
 				A932D6521EB9E1F400DE856F /* PostFillUserViewController.swift */,
 				A9FC59CE1EB7E1700007F21D /* PostConfirmViewController.swift */,
 				A9FC59D01EB7E97D0007F21D /* PostConfirmUserViewController.swift */,
+				A9BAB3DC1ED1E5D300EAE9C8 /* PostBrowseUsersViewController.swift */,
+				A9BAB3D81ED1D65100EAE9C8 /* PostBrowseViewController.swift */,
 				A96A29ED1E8424F900FDEBD9 /* HelpViewController.swift */,
 				A9577AA71E8D4DD8001399B8 /* HelpSecondViewController.swift */,
 				A96A29F41E845E7E00FDEBD9 /* MapViewController.swift */,
-				A96A29F81E84823000FDEBD9 /* SearchViewController.swift */,
-				A9EF211A1EACF742005AA268 /* SearchAccommodationResultsViewController.swift */,
-				A9D6F3D81E8E793900EDBEA1 /* SearchResultsViewController.swift */,
-				A9EF211C1EACF757005AA268 /* SearchUserResultsViewController.swift */,
-				A932D6541EBA285F00DE856F /* CategoryViewController.swift */,
-				A9D2FC471EA7DD1D0014729B /* BrowseViewController.swift */,
 				A99332801E893EB800ECF659 /* PropertyInfoViewController.swift */,
 				A9CEB7981E8AB531002CE794 /* PropertyInfoSecondViewController.swift */,
 				A9CEB79A1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift */,
@@ -315,20 +306,18 @@
 				A9577AA61E8D37A5001399B8 /* UserViewController.swift in Sources */,
 				A93DEABE1E9294B800796D16 /* CustomCell.swift in Sources */,
 				A96A29EC1E8424B700FDEBD9 /* PostViewController.swift in Sources */,
-				A9EF211B1EACF742005AA268 /* SearchAccommodationResultsViewController.swift in Sources */,
 				A96A29F91E84823000FDEBD9 /* SearchViewController.swift in Sources */,
 				A93ECCB81E82F67B00DE6413 /* MenuViewController.swift in Sources */,
-				A9D6F3D91E8E793900EDBEA1 /* SearchResultsViewController.swift in Sources */,
 				A9FC59CF1EB7E1700007F21D /* PostConfirmViewController.swift in Sources */,
 				A9CEB79B1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift in Sources */,
 				A93ECCB61E82F67B00DE6413 /* AppDelegate.swift in Sources */,
 				A932D6531EB9E1F400DE856F /* PostFillUserViewController.swift in Sources */,
 				A99C88031ECC3F7C0060037B /* OffersViewControllers.swift in Sources */,
+				A9BAB3D91ED1D65100EAE9C8 /* PostBrowseViewController.swift in Sources */,
 				A99332811E893EB800ECF659 /* PropertyInfoViewController.swift in Sources */,
 				A96A29F31E842A2600FDEBD9 /* FavouritesViewController.swift in Sources */,
 				A933E2A51EC302DA00A332AE /* Favourite.swift in Sources */,
 				A9FC59CD1EB7E1290007F21D /* PostFillViewController.swift in Sources */,
-				A9D2FC481EA7DD1D0014729B /* BrowseViewController.swift in Sources */,
 				A93ECCBE1E82F67B00DE6413 /* Studacom.xcdatamodeld in Sources */,
 				A977FD2E1E856FC800E61D7A /* Accommodation.swift in Sources */,
 				A9885E111E99139100BF696F /* OtherUserViewController.swift in Sources */,
@@ -337,11 +326,10 @@
 				A933E2A71EC316E000A332AE /* UIImageView+Extension.swift in Sources */,
 				A9F788591EA67EF900B77B8C /* Comment.swift in Sources */,
 				A96A29F51E845E7E00FDEBD9 /* MapViewController.swift in Sources */,
-				A932D6551EBA285F00DE856F /* CategoryViewController.swift in Sources */,
 				A977FD301E85867200E61D7A /* User.swift in Sources */,
-				A9EF211D1EACF757005AA268 /* SearchUserResultsViewController.swift in Sources */,
 				A9F788571EA6603800B77B8C /* CommentsViewController.swift in Sources */,
 				A9D6F3DB1E8E7DA600EDBEA1 /* CustomAnnotation.swift in Sources */,
+				A9BAB3DD1ED1E5D300EAE9C8 /* PostBrowseUsersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

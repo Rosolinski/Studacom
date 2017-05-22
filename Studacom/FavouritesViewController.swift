@@ -9,11 +9,9 @@
 import Foundation
 import UIKit
 
-class FavouritesViewController: UIViewController {
+class FavouritesViewController: UITableViewController {
     
     var favourites = [Accommodation]()
-    
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

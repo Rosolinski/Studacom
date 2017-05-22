@@ -24,8 +24,7 @@ class PostViewController: UIViewController {
     performSegue(withIdentifier: "goToSecondPropertySegue", sender: self)
     }
     
-    @IBAction func goToThirdPropertyVCBtnTapped(_ sender: Any) {
-    performSegue(withIdentifier: "goToThirdPropertySegue", sender: self)
+    @IBAction func goToBrowseBtnTapped(_ sender: Any) {
+        performSegue(withIdentifier: "goToBrowseSegue", sender: self)
     }
-    
 }

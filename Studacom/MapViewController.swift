@@ -19,6 +19,7 @@ class MapViewController: UIViewController {
     let locationManager = CLLocationManager()
     var showingAlert = false
     var refreshAlert: UIAlertController?
+    var userImage = "star"
     
     var accommodations = [Accommodation]()
     
@@ -64,11 +65,34 @@ class MapViewController: UIViewController {
             let annotation = CustomAnnotation()
             annotation.accommodation = accommodation
             annotation.coordinate = accommodation.coordinate
-            annotation.title = "£\(accommodation.price!)pcm"
+            annotation.title = "£\(accommodation.price!) pcm"
             PropertyMap.addAnnotation(annotation)
         }
     }
     
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if annotation.isEqual(mapView.userLocation) {
+            
+            let identifier = "User"
+            
+            var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            
+            if annotationView == nil{
+                annotationView = CustomPointAnnotation(annotation: annotation, reuseIdentifier: identifier)
+                annotationView!.canShowCallout = true
+                
+            } else {
+                annotationView!.annotation = annotation
+            }
+            
+            annotationView!.image = UIImage(named: userImage)
+            
+            return annotationView
+            
+        }
+        return nil
+    }
  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "propertyMapSegue" {
@@ -126,4 +150,6 @@ extension MapViewController: MKMapViewDelegate {
     
 }
 
-        
+class CustomPointAnnotation: MKAnnotationView {
+    var imageName: String!
+}
