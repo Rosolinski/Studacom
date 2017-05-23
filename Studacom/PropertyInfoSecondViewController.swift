@@ -52,10 +52,12 @@ class PropertyInfoSecondViewController: UIViewController, UITableViewDelegate, U
             print("Cell number \(indexPath.row) tapped.")
         }
 
-    
-
     @IBAction func goToThirdVCBtnTapped(_ sender: Any) {
         performSegue(withIdentifier: "segueToThirdVC", sender: self)
+    }
+    
+    @IBAction func dismissCurrentVC(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }
 

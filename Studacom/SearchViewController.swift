@@ -22,9 +22,9 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchDispl
     
     var picker = UIPickerView()
     
-    let distanceData = ["Distance from BU ↕ ", "1", "2", "3"]
+    let distanceData = ["Distance from BU ↕ ", "0 – 5 miles", "6 – 10 miles", "Over 10 miles"]
     let priceData = ["Rent (pcm) ↕ ","£0 – 100", "£101 – 200", "£201 – 300", "£301 – 400", "£401 – 500", "£500 +"]
-    let spaceData = ["Number of spaces ↕ ", "1", "2", "3", "4"]
+    let spaceData = ["Number of spaces ↕ ", "1", "2", "3", "4", "5", "6", "Over 6"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -62,7 +62,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchDispl
     var accommodation: Accommodation!
     
     var accommodations = [Accommodation]()
-    var accommodationFilteredList = [String]()
+    var filtered:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,6 +73,8 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchDispl
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        searchBar.delegate = self
 
         loadAccommodation()
         

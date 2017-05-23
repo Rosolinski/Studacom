@@ -11,7 +11,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class PostBrowseUsersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PostBrowseUsersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tableView: UITableView!
     
@@ -19,7 +19,7 @@ class PostBrowseUsersViewController: UIViewController, UITableViewDelegate, UITa
     let cellReuseIdentifier = "cell"
     
     var user: User!
-    let users: [String] = ["EdgeLord1991", "Zero119", "NightPanda66", "WildCat650", "Panderman", "ZooZoo92", "Miahay12", "EddyJay92", "Ricardo66", "GranthamG", "MGC", "SecretaMento1", "Varcher1991", "Milly72", "AdamScott90"]
+    var users = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,26 +29,61 @@ class PostBrowseUsersViewController: UIViewController, UITableViewDelegate, UITa
         tableView.delegate = self
         tableView.dataSource = self
         
+        loadUser()
+        
     }
     
+    func loadUser() {
+        Alamofire.request("http://139.59.174.112/api/users.json").response { [unowned self] response in
+            
+            guard let data = response.data else { return }
+            
+            let json = JSON(data: data)
+            
+            for userData in json["data"].arrayValue {
+                let user = User(json: userData)
+                self.users.append(user)
+            }
+            
+            self.tableView.reloadData()
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        if segue.identifier == "otherUserSegue" {
+            let vc = segue.destination as! OtherUserViewController
+            vc.user = sender as! User
+        }
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.users.count
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
         
-        cell.textLabel?.text = self.users[indexPath.row]
+        let user = users[indexPath.row]
+        
+        cell.textLabel?.text = user.user_name
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Cell number \(indexPath.row) tapped.")
+        
+        let user = users[indexPath.row]
+        
+        performSegue(withIdentifier: "otherUserSegue", sender: user)
+    }
     @IBAction func goHomeVCSecondVCBtnTapped(_ sender: Any) {
         performSegue(withIdentifier: "homeFromUserSegue", sender: self)
     }
     
     @IBAction func goToBrowseAccommodationsSegue(_ sender: Any) {
         performSegue(withIdentifier: "browseAccommodationsSegue", sender: self)
-}
+    }
 }

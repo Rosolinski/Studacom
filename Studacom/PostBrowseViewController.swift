@@ -19,7 +19,7 @@ class PostBrowseViewController: UIViewController, UITableViewDataSource, UITable
     let cellReuseIdentifier = "cell"
     
     var accommodation: Accommodation!
-    let accommodationList: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    var accommodations = [Accommodation]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,19 +29,44 @@ class PostBrowseViewController: UIViewController, UITableViewDataSource, UITable
         tableView.delegate = self
         tableView.dataSource = self
         
+        loadAccommodation()
     }
     
-    //tables
+    func loadAccommodation() {
+        Alamofire.request("http://139.59.174.112/api/accommodations.json").response { [unowned self] response in
+            
+            guard let data = response.data else { return }
+            
+            let json = JSON(data: data)
+            
+            for accommodationData in json["data"].arrayValue {
+                let accommodation = Accommodation(json: accommodationData)
+                self.accommodations.append(accommodation)
+            }
+            
+            self.tableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "newPropertySegue" {
+            let vc = segue.destination as! PropertyInfoViewController
+            vc.accommodation = sender as! Accommodation
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.accommodationList.count
+        return accommodations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
         
-        cell.textLabel?.text = self.accommodationList[indexPath.row]
+        let accommodation = accommodations[indexPath.row]
+        
+        cell.textLabel?.text = accommodation.accommodation_type
         
         return cell
     }
@@ -49,14 +74,15 @@ class PostBrowseViewController: UIViewController, UITableViewDataSource, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Cell number \(indexPath.row) tapped.")
         
+        let accommodation = accommodations[indexPath.row]
+        
+        performSegue(withIdentifier: "newPropertySegue", sender: accommodation)
     }
     @IBAction func goHomeVCBtnTapped(_ sender: Any) {
         performSegue(withIdentifier: "homeSegue", sender: self)
     }
     
-    
     @IBAction func goToBrowseUsersVCBtnTapped(_ sender: Any) {
         performSegue(withIdentifier: "browseUsersSegue", sender: self)
     }
-    
 }

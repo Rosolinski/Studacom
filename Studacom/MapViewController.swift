@@ -86,7 +86,7 @@ class MapViewController: UIViewController {
                 annotationView!.annotation = annotation
             }
             
-            annotationView!.image = UIImage(named: userImage)
+            annotationView!.image = UIImage(named: "blueHouse")!
             
             return annotationView
             

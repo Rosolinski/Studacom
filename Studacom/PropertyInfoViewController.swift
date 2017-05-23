@@ -96,7 +96,7 @@ class PropertyInfoViewController: UIViewController, UIGestureRecognizerDelegate 
         alert.addAction(alertBtn)
         
         alert.configure(cornerRadius: 20)
-        alert.configure(overlayBackgroundColor: UIColor(red: 0, green: 0, blue: 250, alpha: 0.0005))
+        alert.configure(overlayBackgroundColor: UIColor(red: 40, green: 20, blue: 250, alpha: 0.0009))
         alert.configure(titleFont: UIFont.systemFont(ofSize: 30), titleColor: UIColor.white)
         alert.configure(messageFont: UIFont.systemFont(ofSize: 15), messageColor: UIColor.white)
         
@@ -188,10 +188,13 @@ class PropertyInfoViewController: UIViewController, UIGestureRecognizerDelegate 
     
     @IBAction func goToCommentsVCBtnTapped(_ sender: Any) {
         performSegue(withIdentifier: "CommentsSegue", sender: self)
-        
+        }
+    
+    @IBAction func dismissCurrentVC(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        }
     }
 
-}
 
 
 

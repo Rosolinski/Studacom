@@ -17,7 +17,7 @@ class Comment {
     
     init(json: JSON) {
         
-        comment = json["username"].stringValue
+        comment = json["comment"].stringValue
 
     }
     
