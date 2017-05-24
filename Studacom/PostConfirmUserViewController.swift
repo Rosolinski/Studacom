@@ -17,7 +17,7 @@ class PostConfirmUserViewController: UIViewController, UITextFieldDelegate {
         self.hideKeyboardWhenTappedAround()
     }
     
-    @IBAction func homeVCBtnTapped(_ sender: Any) {
+    @IBAction func homeVCBtnTapped(_ sender: AnyObject) {
 
         let alertController = UIAlertController (title: "Post successful", message: "Your offer is now on our database. It will be reviewed and uploaded shortly.", preferredStyle: .alert)
         

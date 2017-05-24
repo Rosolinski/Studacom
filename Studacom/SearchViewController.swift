@@ -95,6 +95,14 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchDispl
             self.tableView.reloadData()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "newPropertySegue" {
+            let vc = segue.destination as! PropertyInfoViewController
+            vc.accommodation = sender as! Accommodation
+        }
+    }
 
     //tables
     
@@ -115,6 +123,10 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchDispl
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Cell number \(indexPath.row) tapped.")
+        
+        let accommodation = accommodations[indexPath.row]
+        
+        performSegue(withIdentifier: "newPropertySegue", sender: accommodation)
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
@@ -131,5 +143,17 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchDispl
         
         //action events
     }
-
+    
+//    func searchAccommodations(search: String) -> [Accommodation] {
+//        
+//        for accommodation in accommodations {
+//            if accommodation.accommodation_type.lowercased().range(of: search.lowercased()) != nil {
+//                results.append(accommodation)
+//        }
+//    }
+//        return results
+//}
+//    
+//    var results = searchAccommodations(search:"a")
+//    }
 }

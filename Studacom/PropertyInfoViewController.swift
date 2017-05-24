@@ -35,7 +35,7 @@ class PropertyInfoViewController: UIViewController, UIGestureRecognizerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Property"
+        self.title = ""
 
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PropertyInfoViewController.imageTapped(_:)))
         let secondTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(PropertyInfoViewController.secondImageTapped(_:)))
@@ -86,6 +86,14 @@ class PropertyInfoViewController: UIViewController, UIGestureRecognizerDelegate 
             let vc = segue.destination as! PropertyInfoSecondViewController
             vc.accommodation = accommodation
         }
+        
+        if segue.identifier == "CommentsSegue" {
+            let vc = segue.destination as! CommentsViewController
+            vc.accommodation = accommodation
+        }
+        
+
+        
     }
     
     @IBAction func showBtn(_ sender: Any) {

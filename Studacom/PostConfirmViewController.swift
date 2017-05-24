@@ -48,7 +48,7 @@ class PostConfirmViewController: UIViewController, UINavigationControllerDelegat
         self.hideKeyboardWhenTappedAround()
     }
     
-    @IBAction func homeCheckVCBtnTapped(_ sender: Any) {
+    @IBAction func homeCheckVCBtnTapped(_ sender: AnyObject) {
         guard let postCodeTextView = postCodeTextView.text else { return}
         
         guard postCodeTextView.characters.count > 0 else {

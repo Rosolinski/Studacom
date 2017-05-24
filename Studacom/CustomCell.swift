@@ -13,5 +13,7 @@ class CustomCell: UITableViewCell {
     
     var accommodation: Accommodation!
     var user: User!
+    var favourite: Favourite!
+    var comment: Comment!
     
 }

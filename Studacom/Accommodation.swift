@@ -19,6 +19,7 @@ class Accommodation {
     var id: String!
     var accommodation_type: String!
     var images = [String]()
+    var comments = [Comment]()
     var mainImage: String!
     var galleryImage: String!
     
@@ -35,6 +36,10 @@ class Accommodation {
                 mainImage = "http://139.59.174.112/img/posts/" + image["name"].stringValue + ".jpg"
             }
             images.append("http://139.59.174.112/img/posts/" + image["name"].stringValue + ".jpg")
+        }
+        
+        for comment in json["accommodation_comments"].arrayValue {
+            comments.append(Comment(json: comment))
         }
         
         print(images)
