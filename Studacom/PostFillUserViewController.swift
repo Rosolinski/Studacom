@@ -32,7 +32,7 @@ class PostFillUserViewController: UIViewController, UITextFieldDelegate {
         guard titleTextField.characters.count > 0 else {
             
             print("Please fill in the textfields")
-            
+
             return
         }
         

@@ -8,45 +8,36 @@
 
 import Foundation
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class PostFillViewController: UIViewController, UITextFieldDelegate {
  
 //    Accommodation Data Fields
     
-    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet var titleTextField: UITextField!
+    @IBOutlet var textView: UITextView!
     @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet var postCodeTextField: UITextField!
     
     @IBOutlet weak var button: UIButton!
     
-//    private func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-//        
-//        let text = (textField.text! as NSString).replacingCharacters(in: range, with: string)
-//        
-//        if !text.isEmpty{
-//            button.isUserInteractionEnabled = false
-//        } else {
-//            button.isUserInteractionEnabled = true
-//        }
-//        
-//        return true
-//    }
+    var accommodation: Accommodation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Add Details"
         self.hideKeyboardWhenTappedAround()
-        textField.delegate = self
-        
-        //Default checking and disabling of the Button
-//        if (textField.text!.isEmpty){
-//            button.isUserInteractionEnabled = false // Disabling the button
-//        }
+        titleTextField.delegate = self
+        priceTextField.delegate = self
+        postCodeTextField.delegate = self
         
     }
     
     @IBAction func goToConfirmAccommodationVCBtnTapped(_ sender: Any) {
         
-        guard let textField = textField.text else { return}
+        guard let textField = titleTextField.text else { return}
         
         guard textField.characters.count > 0 else {
             
@@ -57,8 +48,20 @@ class PostFillViewController: UIViewController, UITextFieldDelegate {
         
         self.performSegue(withIdentifier: "goToConfirmSegue", sender: nil)
         
+        let parameters: Parameters = [
+            "accommodation_type": titleTextField.text!,
+            "price": priceTextField.text!,
+            "post_code": postCodeTextField.text!,
+            "description": textView.text!
+        ]
+        
+        Alamofire.request("http://139.59.174.112/api/accommodations.json", method: .post, parameters: parameters, encoding: JSONEncoding.default).response { response in
+            
+        }
+    }
+        
 //        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PostConfirm")
 //        present(vc, animated: true, completion: nil)
               
     }
-}
+

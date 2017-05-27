@@ -8,10 +8,9 @@
 
 import Foundation
 import UIKit
+import PCLBlurEffectAlert
 
 class PostConfirmViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate  {
-    
-    @IBOutlet weak var postCodeTextView: UITextField!
     
     @IBOutlet weak var myPropertyImageView: UIImageView!
     
@@ -49,26 +48,21 @@ class PostConfirmViewController: UIViewController, UINavigationControllerDelegat
     }
     
     @IBAction func homeCheckVCBtnTapped(_ sender: AnyObject) {
-        guard let postCodeTextView = postCodeTextView.text else { return}
         
-        guard postCodeTextView.characters.count > 0 else {
-            
-            print("Please fill in the textfield")
-            
-            return
-        }
-        
-        let alertController = UIAlertController (title: "Post successful", message: "Your offer is now on our database. It will be reviewed and uploaded shortly.", preferredStyle: .alert)
-        
-        self.present(alertController, animated: true, completion: nil)
-        
-        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+        let alert = PCLBlurEffectAlert.Controller(title: "Post successful", message: "Your offer is now on our database. It will be reviewed and uploaded shortly.", effect: UIBlurEffect(style: .dark) , style: .alert)
+        let alertBtn = PCLBlurEffectAlert.Action(title: "OK", style: .default, handler: nil)
             self.performSegue(withIdentifier: "goHomeSegue", sender: self)
+        alert.addAction(alertBtn)
+        
+        alert.configure(cornerRadius: 20)
+        alert.configure(overlayBackgroundColor: UIColor(red: 40, green: 20, blue: 250, alpha: 0.0009))
+        alert.configure(titleFont: UIFont.systemFont(ofSize: 30), titleColor: UIColor.white)
+        alert.configure(messageFont: UIFont.systemFont(ofSize: 15), messageColor: UIColor.white)
+        
+        alert.show()
         
         self.performSegue(withIdentifier: "goHomeSegue", sender: nil)
             print("Accommodation post complete");}
-        alertController.addAction(OKAction)
         
     }
-    
-}
+

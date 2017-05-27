@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import PCLBlurEffectAlert
 
 class PostConfirmUserViewController: UIViewController, UITextFieldDelegate {
     
@@ -19,17 +20,21 @@ class PostConfirmUserViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func homeVCBtnTapped(_ sender: AnyObject) {
 
-        let alertController = UIAlertController (title: "Post successful", message: "Your offer is now on our database. It will be reviewed and uploaded shortly.", preferredStyle: .alert)
+        let alert = PCLBlurEffectAlert.Controller(title: "Post successful", message: "Your offer is now on our database. It will be reviewed and uploaded shortly.", effect: UIBlurEffect(style: .dark) , style: .alert)
+        let alertBtn = PCLBlurEffectAlert.Action(title: "OK", style: .default, handler: nil)
+        self.performSegue(withIdentifier: "goHomeSegue", sender: self)
+        alert.addAction(alertBtn)
         
-        self.present(alertController, animated: true, completion: nil)
-
+        alert.configure(cornerRadius: 20)
+        alert.configure(overlayBackgroundColor: UIColor(red: 40, green: 20, blue: 250, alpha: 0.0009))
+        alert.configure(titleFont: UIFont.systemFont(ofSize: 30), titleColor: UIColor.white)
+        alert.configure(messageFont: UIFont.systemFont(ofSize: 15), messageColor: UIColor.white)
         
-        let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
-             self.performSegue(withIdentifier: "goHomeSegue", sender: self)
+        alert.show()
+        
+        self.performSegue(withIdentifier: "goHomeSegue", sender: nil)
+        print("User post complete");}
             
-            print("User post complete");}
-                alertController.addAction(OKAction)
-        
     }
     
-}
+

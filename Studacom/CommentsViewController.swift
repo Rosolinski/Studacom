@@ -56,7 +56,7 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBAction func postComment(_ sender: Any) {
     
-        let alert = PCLBlurEffectAlert.Controller(title: "Comment added", message: "Please reopen the app and check this page again to see what you wrote.", effect: UIBlurEffect(style: .dark) , style: .alert)
+        let alert = PCLBlurEffectAlert.Controller(title: "Comment added", message: "Please reopen the app and check this page again to see what you wrote", effect: UIBlurEffect(style: .dark) , style: .alert)
         let alertBtn = PCLBlurEffectAlert.Action(title: "OK", style: .default, handler: nil)
         
         alert.addAction(alertBtn)

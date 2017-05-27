@@ -42,6 +42,7 @@ class OtherUserViewController: UIViewController {
     }
         userLabel.text = "\(user.user_name!)"
         emailLabel.text = "\(user.email!)"
+        phoneLabel.text = "\(user.phone!)"
         bioLabel.text = "\(user.bio!)"
         
         print(user.user_name)

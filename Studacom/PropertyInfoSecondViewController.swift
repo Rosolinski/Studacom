@@ -52,6 +52,15 @@ class PropertyInfoSecondViewController: UIViewController, UITableViewDelegate, U
             print("Cell number \(indexPath.row) tapped.")
         }
 
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToThirdVC" {
+            let vc = segue.destination as! PropertyInfoThirdViewController
+            vc.accommodation = accommodation
+        }
+    
+    }
+
     @IBAction func goToThirdVCBtnTapped(_ sender: Any) {
         performSegue(withIdentifier: "segueToThirdVC", sender: self)
     }
