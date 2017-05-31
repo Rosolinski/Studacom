@@ -73,4 +73,9 @@ class UserViewController: UIViewController, UINavigationControllerDelegate, UIIm
             performSegue(withIdentifier: "goToHelpSegue", sender: self)
     }
     
+    @IBAction func logOutBtnTapped(_ sender: Any) {
+            performSegue(withIdentifier: "logOutSegue", sender: self)
+    }
+    
+    
 }

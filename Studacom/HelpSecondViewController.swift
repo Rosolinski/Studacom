@@ -21,4 +21,10 @@ class HelpSecondViewController: UIViewController {
     dismiss(animated: true, completion: nil)
         
     }
+    
+    @IBAction func goToSearchVCBtnTapped(_ sender: Any) {
+    performSegue(withIdentifier: "goToSearchSegue", sender: self)
+    }
+    
+    
 }

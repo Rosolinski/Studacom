@@ -22,9 +22,19 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchDispl
     
     var picker = UIPickerView()
     
-    let distanceData = ["Distance from BU ↕ ", "0 – 5 miles", "6 – 10 miles", "Over 10 miles"]
+    var refreshAlert: UIAlertController?
+    let cellReuseIdentifier = "cell"
+    
+    var accommodation: Accommodation!
+    
+    var accommodations = [Accommodation]()
+    var filteredData = [Accommodation]()
+    
+    var isSearching = false
+    
+    let distanceData = ["Distance from BU ↕ ", "0 – 3 miles", "3 – 6 miles", "Over 6 miles"]
     let priceData = ["Rent (pcm) ↕ ","£0 – 100", "£101 – 200", "£201 – 300", "£301 – 400", "£401 – 500", "£500 +"]
-    let spaceData = ["Number of spaces ↕ ", "1", "2", "3", "4", "5", "6", "Over 6"]
+    let spaceData = ["Number of spaces ↕ ", "1", "2", "3", "4", "Over 4"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -55,14 +65,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchDispl
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 
     }
-    
-    var refreshAlert: UIAlertController?
-    let cellReuseIdentifier = "cell"
-    
-    var accommodation: Accommodation!
-    
-    var accommodations = [Accommodation]()
-    var filtered:[String] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +78,7 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchDispl
         tableView.dataSource = self
         
         searchBar.delegate = self
+        searchBar.returnKeyType = UIReturnKeyType.done
 
         loadAccommodation()
         
@@ -106,15 +110,22 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchDispl
 
     //tables
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return accommodations.count
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) ->
+        Int {
+            return isSearching ? filteredData.count : accommodations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
         
-        let accommodation = accommodations[indexPath.row]
+        var accommodation: Accommodation!
+        
+        if isSearching {
+            accommodation = filteredData[indexPath.row]
+        } else {
+            accommodation = accommodations[indexPath.row]
+        }
         
         cell.textLabel?.text = accommodation.accommodation_type
         
@@ -144,16 +155,34 @@ class SearchViewController: UIViewController, UITableViewDelegate, UISearchDispl
         //action events
     }
     
-//    func searchAccommodations(search: String) -> [Accommodation] {
-//        
-//        for accommodation in accommodations {
-//            if accommodation.accommodation_type.lowercased().range(of: search.lowercased()) != nil {
-//                results.append(accommodation)
-//        }
-//    }
-//        return results
-//}
-//    
-//    var results = searchAccommodations(search:"a")
-//    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            
+            isSearching = false
+            
+            view.endEditing(true)
+            
+            
+        } else {
+            
+            isSearching = true
+            filteredData.removeAll()
+            
+            for accommodation in accommodations {
+                if accommodation.accommodation_type.lowercased().range(of: searchBar.text!.lowercased()) != nil {
+                    filteredData.append(accommodation)
+                }
+            }
+
+            
+        }
+        
+        tableView.reloadData()
+    }
+    
+    @IBAction func dismissVCBtnTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 }

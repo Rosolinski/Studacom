@@ -19,11 +19,20 @@ class Accommodation {
     var id: String!
     var accommodation_type: String!
     var post_code: String!
-    var images = [String]()
+    var distance: Double!
+    var spaces: String!
+    
+//    Connect to Comments Page
+    
     var comments = [Comment]()
+    
+//    Connect to Gallery Images
+    var images = [String]()
+    var mainImage: String?
+    var galleryImage: String?
+    
+//    Connect to User Info
     var user_accommodations = [UserAccommodation]()
-    var mainImage: String!
-    var galleryImage: String!
     var user: String!
     var phone: String!
     var email: String!
@@ -40,6 +49,8 @@ class Accommodation {
         email = json["email"].stringValue
         bio = json["bio"].stringValue
         post_code = json["post_code"].stringValue
+        distance = json["distance"].doubleValue
+        spaces = json["spaces"].stringValue
         accommodation_type = json["accommodation_type"].stringValue
         
         for image in json["accommodation_images"].arrayValue {

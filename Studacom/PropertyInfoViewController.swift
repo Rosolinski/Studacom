@@ -72,7 +72,9 @@ class PropertyInfoViewController: UIViewController, UIGestureRecognizerDelegate 
     }
     
     func loadImages() {
-        imageView.imageFromServerURL(urlString: accommodation.mainImage)
+        guard let mainImage = accommodation.mainImage else { return }
+        
+        imageView.imageFromServerURL(urlString: mainImage)
 
         for (index, image) in accommodation.images.enumerated() {
             guard index < 4 else { return }
@@ -91,8 +93,6 @@ class PropertyInfoViewController: UIViewController, UIGestureRecognizerDelegate 
             let vc = segue.destination as! CommentsViewController
             vc.accommodation = accommodation
         }
-        
-
         
     }
     
