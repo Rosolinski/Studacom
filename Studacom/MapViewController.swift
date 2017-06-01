@@ -19,7 +19,6 @@ class MapViewController: UIViewController {
     let locationManager = CLLocationManager()
     var showingAlert = false
     var refreshAlert: UIAlertController?
-    var userImage = "star"
     
     var accommodations = [Accommodation]()
     
@@ -86,7 +85,7 @@ class MapViewController: UIViewController {
                 annotationView!.annotation = annotation
             }
             
-            annotationView!.image = UIImage(named: "blueHouse")!
+            annotationView!.image = UIImage(named: "BlueHouse")!
             
             return annotationView
             
@@ -136,7 +135,7 @@ extension MapViewController: MKMapViewDelegate {
         }
         else {
             anView?.annotation = annotation
-            anView?.image = UIImage(named: "blueHouse")
+            anView?.image = UIImage(named: "BlueHouse")
         }
         
         if let anView = anView {

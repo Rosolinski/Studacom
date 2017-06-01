@@ -68,6 +68,7 @@ class PostBrowseUsersViewController: UIViewController, UITableViewDataSource, UI
         let user = users[indexPath.row]
         
         cell.textLabel?.text = user.user_name
+        cell.textLabel?.font = UIFont(name: (cell.textLabel?.font.fontName)!, size:15)
         
         return cell
     }

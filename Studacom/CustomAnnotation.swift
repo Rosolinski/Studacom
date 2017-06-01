@@ -12,5 +12,7 @@ import MapKit
 class CustomAnnotation: MKPointAnnotation {
     
     var accommodation: Accommodation!
+    var images = [String]()
+    var mainImage: String?
     
 }

@@ -55,7 +55,7 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
 //    }
     
     @IBAction func postComment(_ sender: Any) {
-    
+        
         let alert = PCLBlurEffectAlert.Controller(title: "Comment added", message: "Please reopen the app and check this page again to see what you wrote", effect: UIBlurEffect(style: .dark) , style: .alert)
         let alertBtn = PCLBlurEffectAlert.Action(title: "OK", style: .default, handler: nil)
         
@@ -93,8 +93,32 @@ class CommentsViewController: UIViewController, UITableViewDataSource, UITableVi
         let comment = accommodation.comments[indexPath.row]
         
         cell.textLabel?.text = comment.comment
+        cell.imageView?.image = UIImage(named:"placeholder_User")
+        cell.textLabel?.font = UIFont(name: (cell.textLabel?.font.fontName)!, size:15)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
+        let comment = accommodation.comments[indexPath.row]
+        cell.textLabel?.text = comment.comment
+        
+        let alert = PCLBlurEffectAlert.Controller(title: "This user wrote:", message: "'\(comment.comment!)'", effect : UIBlurEffect(style: .dark) , style: .alert)
+        let alertBtn = PCLBlurEffectAlert.Action(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(alertBtn)
+        
+        alert.configure(cornerRadius: 20)
+        alert.configure(overlayBackgroundColor: UIColor(red: 40, green: 20, blue: 250, alpha: 0.0009))
+        alert.configure(titleFont: UIFont.systemFont(ofSize: 30), titleColor: UIColor.white)
+        alert.configure(messageFont: UIFont.systemFont(ofSize: 15), messageColor: UIColor.white)
+     
+        print("Cell number \(indexPath.row) tapped.")
+        
+        alert.show()
+        
     }
     
     @IBAction func dismissCurrentVC(_ sender: Any) {

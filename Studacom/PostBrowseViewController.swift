@@ -67,6 +67,7 @@ class PostBrowseViewController: UIViewController, UITableViewDataSource, UITable
         let accommodation = accommodations[indexPath.row]
         
         cell.textLabel?.text = accommodation.accommodation_type
+        cell.textLabel?.font = UIFont(name: (cell.textLabel?.font.fontName)!, size:15)
         
         return cell
     }
