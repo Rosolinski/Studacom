@@ -31,11 +31,11 @@
 		A9885E111E99139100BF696F /* OtherUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9885E101E99139100BF696F /* OtherUserViewController.swift */; };
 		A99332811E893EB800ECF659 /* PropertyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99332801E893EB800ECF659 /* PropertyInfoViewController.swift */; };
 		A99C88031ECC3F7C0060037B /* OffersViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99C88021ECC3F7C0060037B /* OffersViewControllers.swift */; };
-		A9B27F2F1EE03C40000C965A /* BlueHouse.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B27F2E1EE03C40000C965A /* BlueHouse.png */; };
-		A9B27F311EE03DEE000C965A /* miniBlueHouse.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B27F301EE03DEE000C965A /* miniBlueHouse.png */; };
-		A9B27F331EE052DE000C965A /* placeholder_User.png in Resources */ = {isa = PBXBuildFile; fileRef = A9B27F321EE052DE000C965A /* placeholder_User.png */; };
 		A9BAB3D91ED1D65100EAE9C8 /* PostBrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BAB3D81ED1D65100EAE9C8 /* PostBrowseViewController.swift */; };
 		A9BAB3DD1ED1E5D300EAE9C8 /* PostBrowseUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BAB3DC1ED1E5D300EAE9C8 /* PostBrowseUsersViewController.swift */; };
+		A9C3A7A31EE5B16A00D11432 /* blueHouse.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C3A7A21EE5B16A00D11432 /* blueHouse.png */; };
+		A9C3A7A51EE5B1B100D11432 /* placeholder_User.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C3A7A41EE5B1B100D11432 /* placeholder_User.png */; };
+		A9C3A7A71EE5B1D500D11432 /* miniBlueHouse.png in Resources */ = {isa = PBXBuildFile; fileRef = A9C3A7A61EE5B1D500D11432 /* miniBlueHouse.png */; };
 		A9C832DE1ED85BC600F41A40 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C832DD1ED85BC600F41A40 /* SignInViewController.swift */; };
 		A9CEB7991E8AB531002CE794 /* PropertyInfoSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CEB7981E8AB531002CE794 /* PropertyInfoSecondViewController.swift */; };
 		A9CEB79B1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CEB79A1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift */; };
@@ -78,11 +78,11 @@
 		A9885E101E99139100BF696F /* OtherUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherUserViewController.swift; sourceTree = "<group>"; };
 		A99332801E893EB800ECF659 /* PropertyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyInfoViewController.swift; sourceTree = "<group>"; };
 		A99C88021ECC3F7C0060037B /* OffersViewControllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersViewControllers.swift; sourceTree = "<group>"; };
-		A9B27F2E1EE03C40000C965A /* BlueHouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlueHouse.png; path = "../../Code/student-app-demo/student-app-demo/Assets.xcassets/BlueHouse.imageset/BlueHouse.png"; sourceTree = "<group>"; };
-		A9B27F301EE03DEE000C965A /* miniBlueHouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = miniBlueHouse.png; path = ../../../Pictures/Drawings/miniBlueHouse.png; sourceTree = "<group>"; };
-		A9B27F321EE052DE000C965A /* placeholder_User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = placeholder_User.png; path = ../../../Pictures/Drawings/placeholder_User.png; sourceTree = "<group>"; };
 		A9BAB3D81ED1D65100EAE9C8 /* PostBrowseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostBrowseViewController.swift; sourceTree = "<group>"; };
 		A9BAB3DC1ED1E5D300EAE9C8 /* PostBrowseUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostBrowseUsersViewController.swift; sourceTree = "<group>"; };
+		A9C3A7A21EE5B16A00D11432 /* blueHouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blueHouse.png; path = Assets.xcassets/blueHouse.imageset/blueHouse.png; sourceTree = "<group>"; };
+		A9C3A7A41EE5B1B100D11432 /* placeholder_User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = placeholder_User.png; path = Assets.xcassets/placeholder_User.imageset/placeholder_User.png; sourceTree = "<group>"; };
+		A9C3A7A61EE5B1D500D11432 /* miniBlueHouse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = miniBlueHouse.png; path = Assets.xcassets/miniBlueHouse.imageset/miniBlueHouse.png; sourceTree = "<group>"; };
 		A9C832DD1ED85BC600F41A40 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A9CEB7981E8AB531002CE794 /* PropertyInfoSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyInfoSecondViewController.swift; sourceTree = "<group>"; };
 		A9CEB79A1E8AB5BD002CE794 /* PropertyInfoThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyInfoThirdViewController.swift; sourceTree = "<group>"; };
@@ -171,9 +171,9 @@
 				A96A29EF1E842A0100FDEBD9 /* Main.storyboard */,
 				A93ECCBF1E82F67B00DE6413 /* Assets.xcassets */,
 				A9CB1FEF1EE4A26000B7D940 /* Classes */,
-				A9B27F2E1EE03C40000C965A /* BlueHouse.png */,
-				A9B27F301EE03DEE000C965A /* miniBlueHouse.png */,
-				A9B27F321EE052DE000C965A /* placeholder_User.png */,
+				A9C3A7A21EE5B16A00D11432 /* blueHouse.png */,
+				A9C3A7A61EE5B1D500D11432 /* miniBlueHouse.png */,
+				A9C3A7A41EE5B1B100D11432 /* placeholder_User.png */,
 				A93ECCC11E82F67B00DE6413 /* LaunchScreen.storyboard */,
 				A93ECCC41E82F67B00DE6413 /* Info.plist */,
 				A93ECCBC1E82F67B00DE6413 /* Studacom.xcdatamodeld */,
@@ -259,12 +259,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9B27F2F1EE03C40000C965A /* BlueHouse.png in Resources */,
 				A96A29F11E842A0100FDEBD9 /* Main.storyboard in Resources */,
+				A9C3A7A71EE5B1D500D11432 /* miniBlueHouse.png in Resources */,
 				A93ECCC31E82F67B00DE6413 /* LaunchScreen.storyboard in Resources */,
 				A93ECCC01E82F67B00DE6413 /* Assets.xcassets in Resources */,
-				A9B27F331EE052DE000C965A /* placeholder_User.png in Resources */,
-				A9B27F311EE03DEE000C965A /* miniBlueHouse.png in Resources */,
+				A9C3A7A31EE5B16A00D11432 /* blueHouse.png in Resources */,
+				A9C3A7A51EE5B1B100D11432 /* placeholder_User.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
